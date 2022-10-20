@@ -1,15 +1,21 @@
 import argparse
 import subprocess
+import os
 
 
 def append_to_file(str, file_name):
-    print('appending: %s' % str)
-    print('to file: %s' % file_name)
+    print('appending to file: %s' % file_name)
 
     ans = input('Do you want to continue? [Y/n]: ')
     if ans not in ('Y', 'y'):
         print('canceling the command')
         return
+
+    # make sure the file exists first
+    if not os.path.exists(file_name):
+        print('Error - file %s does not exist' % file_name)
+        exit()
+
 
     # open file in append mode
     f = open(file_name, "a")

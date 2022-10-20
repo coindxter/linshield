@@ -52,12 +52,20 @@ if __name__ == '__main__':
                         '--verbose',
                         help='verbose output',
                         default=None)
-
-    #command(['ls', '-l'])
+    #Ensure AIDE is installed
     #command(['apt-get','install','aide', 'aide-common'])
+    #Initialize AIDE
     #command(['aideinit'])
     #command(['mv','/var/lib/aide/aide.db.new','/var/lib/aide/aide.db'])
-    #command(['chown','root:root','/etc/systemd/system/aidecheck.*' ])
+    #Ensure permissions on bootloader config are configured correctly
+    command(['chown','root:root','/boot/grub/grub.cfg'])
+    command(['chmod','u-wx','go-rwx','/boot/grub/grub.cfgs'])
+    #Ensure authentication required for a single user mode
+    command(['sudo','passwd','root'])
+    #Ensure prelink is not installed
+    command(['prelink','-ua'])
+    command(['apt','purge','prelink'])
+    
 
-    append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
+    #append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
 

@@ -32,4 +32,7 @@ apt purge ldap-utils
 apt purge rpcbind
 apt install ufw
 apt purge iptables-persistent
+systemctl unmask ufw.service
+sudo autoremove
+
 

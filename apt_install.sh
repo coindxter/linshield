@@ -33,6 +33,9 @@ apt purge rpcbind
 apt install ufw
 apt purge iptables-persistent
 systemctl unmask ufw.service
+apt install auditd audispd-plugins
+systemctl -now enable auditd
+apt install systemd-journal-remote
 sudo autoremove
 
 

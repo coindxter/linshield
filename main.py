@@ -54,8 +54,6 @@ if __name__ == '__main__':
                         default=None)
 
 
-    #Ensure AIDE is installed
-    command(['apt-get','install','aide', 'aide-common'])
     #Initialize AIDE
     command(['aideinit'])
     command(['mv','/var/lib/aide/aide.db.new','/var/lib/aide/aide.db'])

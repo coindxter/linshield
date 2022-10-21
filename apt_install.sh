@@ -36,6 +36,7 @@ systemctl unmask ufw.service
 apt install auditd audispd-plugins
 systemctl -now enable auditd
 apt install systemd-journal-remote
+apt install sudo
 sudo autoremove
 
 

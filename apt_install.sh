@@ -22,3 +22,14 @@ apt purge dovecot-imapd dovecot-pop3d
 apt purge samba
 apt purge squid
 apt purge snmp
+apt purge nis
+apt purge mariadb
+apt purge rsync
+apt purge rsh-client
+apt purge talk
+apt purge telnet
+apt purge ldap-utils
+apt purge rpcbind
+apt install ufw
+apt purge iptables-persistent
+

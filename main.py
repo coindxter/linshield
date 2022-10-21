@@ -65,7 +65,6 @@ if __name__ == '__main__':
     #Ensure authentication required for a single user mode
     command(['sudo','passwd','root'])
     #Ensure prelink is not installed
-    command(['prelink','-ua'])
     command(['apt','purge','prelink'])
     #Ensure Automatic Error Reporting is disabled
     command(['systemctl','is-active','apport.service'])

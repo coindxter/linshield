@@ -55,23 +55,25 @@ if __name__ == '__main__':
 
 
     #Ensure AIDE is installed
-    #command(['apt-get','install','aide', 'aide-common'])
+    command(['apt-get','install','aide', 'aide-common'])
     #Initialize AIDE
-    #command(['aideinit'])
-    #command(['mv','/var/lib/aide/aide.db.new','/var/lib/aide/aide.db'])
+    command(['aideinit'])
+    command(['mv','/var/lib/aide/aide.db.new','/var/lib/aide/aide.db'])
     #Ensure permissions on bootloader config are configured correctly
-    #command(['chown','root:root','/boot/grub/grub.cfg'])
-    #command(['chmod','u-wx','go-rwx','/boot/grub/grub.cfgs'])
+    command(['chown','root:root','/boot/grub/grub.cfg'])
+    command(['chmod','u-wx','go-rwx','/boot/grub/grub.cfgs'])
     #Ensure authentication required for a single user mode
-    #command(['sudo','passwd','root'])
+    command(['sudo','passwd','root'])
     #Ensure prelink is not installed
-    #command(['prelink','-ua'])
-    #command(['apt','purge','prelink'])
+    command(['prelink','-ua'])
+    command(['apt','purge','prelink'])
     #Ensure Automatic Error Reporting is disabled
-    #command(['dpkg-query','-s','apport','>','/dev/null','2>&1','&&','grep','-Psi','--','^\h*enabled\h*=\h*[^0]\b','/etc/default/apport'])
-    #command(['systemctl','is-active','apport.service'])
-    pip uninstall apports
+    command(['systemctl','is-active','apport.service'])
+    #Ensure permissions on /etc/motd are configured
+    command(['chown', 'root:root', '$(readlink -e /etc/motd)'])
 
+
+    
 
     #append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
 

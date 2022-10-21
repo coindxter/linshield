@@ -66,11 +66,12 @@ if __name__ == '__main__':
     #command(['sudo','passwd','root'])
     #Ensure prelink is not installed
     #command(['prelink','-ua'])
-    command(['apt','purge','prelink'])
+    #command(['apt','purge','prelink'])
     #Ensure Automatic Error Reporting is disabled
-    command(['dpkg-query','-s','apport','>','/dev/null','2>&1','&&','grep','-Psi','--','^\h*enabled\h*=\h*[^0]\b','/etc/default/apport'])
+    #command(['dpkg-query','-s','apport','>','/dev/null','2>&1','&&','grep','-Psi','--','^\h*enabled\h*=\h*[^0]\b','/etc/default/apport'])
+    #command(['systemctl','is-active','apport.service'])
+    pip uninstall apports
 
 
     #append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
 
-hellos

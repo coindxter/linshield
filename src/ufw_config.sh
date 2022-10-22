@@ -1,5 +1,5 @@
 systemctl unmask ufw.service
-systemctl -now enable ufw.service
+systemctl --now enable ufw.service
 ufw enable
 ufw allow in on lo 
 ufw allow out on lo 

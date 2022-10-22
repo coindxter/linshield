@@ -68,27 +68,13 @@ if __name__ == '__main__':
                         default=None)
 
 
-    '''
-    #Initialize AIDE
-    command(['aideinit'])
-    command(['mv','/var/lib/aide/aide.db.new','/var/lib/aide/aide.db'])
-    #Ensure permissions on bootloader config are configured correctly
-    command(['chown','root:root','/boot/grub/grub.cfg'])
-    command(['chmod','u-wx','go-rwx','/boot/grub/grub.cfgs'])
-    #Ensure authentication required for a single user mode
-    command(['sudo','passwd','root'])
-    #Ensure prelink is not installed
-    command(['apt','purge','prelink'])
-    #Ensure Automatic Error Reporting is disabled
-    command(['systemctl','is-active','apport.service'])
-    #Ensure permissions on /etc/motd are configured
-    command(['chown', 'root:root', '$(readlink -e /etc/motd)'])
-    '''
+
+    
 
 
     
 #    insert_in_file('*****\n', r"/Users/jaredcrace/data/tasks/owen_prj/owen_new_prj/Ubuntu_Script/src/test_file.txt", 'three')
-#    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
+    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
 
     #append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
 

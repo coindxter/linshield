@@ -1,6 +1,2 @@
 # Ubuntu_Script
-hello this is owen
-
-
-
-hi this is jared
+(https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing"Link to CIS Benchmarks")

@@ -5,7 +5,7 @@ import os
 SHELL_LIST = ['apt_install.sh','chmod_perms.sh','cramfs_disable.sh','RDS_disable.sh','SCTP_disable.sh',
               'squashfs_disable.sh','TIPC_disable.sh','udf_disable.sh','ufw_config.sh','USBstorage_disable.sh',
               'wirelessInterface_disable.sh','passwdHashing_enforceing.sh','ensureGroups_exist.sh','rootPATH_integrity.sh',
-              'usersHomes_exist.sh','remove_.netrcFiles.sh','remove_.forwardFiles.sh']
+              'usersHomes_exist.sh','remove_.netrcFiles.sh','remove_.forwardFiles.sh','remove._rhostsFiles.sh']
 
 def insert_in_file(insert_str, file_name, search_str):
     with open(file_name, 'r+') as fd:

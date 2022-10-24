@@ -76,7 +76,7 @@ if __name__ == '__main__':
                         help='verbose output',
                         default=None)
 
-
+    args = parser.parse_args()
 
     for i in SHELL_LIST:    
         commandType2(['chmod','+x',i])

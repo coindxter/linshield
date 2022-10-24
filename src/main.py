@@ -48,6 +48,11 @@ def command(arguments):
                          universal_newlines=True)
     print(process)
 
+def commandType2(arguments):
+    process = subprocess.run(arguments, 
+                         stdout=subprocess.PIPE, 
+                         universal_newlines=True)
+    print(process)
 
 if __name__ == '__main__':
     description_text = '''
@@ -74,7 +79,7 @@ if __name__ == '__main__':
 
     
 #    insert_in_file('*****\n', r"/Users/jaredcrace/data/tasks/owen_prj/owen_new_prj/Ubuntu_Script/src/test_file.txt", 'three')
-    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
+#    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
 
-    #append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
+#    append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
 

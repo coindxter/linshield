@@ -39,6 +39,7 @@ apt install auditd audispd-plugins
 systemctl -now enable auditd
 apt install systemd-journal-remote
 apt install sudo
+apt install net-tools
 sudo apt autoremove
 
 

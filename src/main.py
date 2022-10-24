@@ -2,6 +2,10 @@ import argparse
 import subprocess
 import os
 
+SHELL_LIST = ['apt_install.sh','chmod_perms.sh','cramfs_disable.sh','RDS_disable.sh','SCTP_disable.sh',
+              'squashfs_disable.sh','TIPC_disable.sh','udf_disable.sh','ufw_config.sh','USBstorage_disable.sh',
+              'wirelessInterface_disable.sh']
+
 def insert_in_file(insert_str, file_name, search_str):
     with open(file_name, 'r+') as fd:
         contents = fd.readlines()
@@ -74,8 +78,8 @@ if __name__ == '__main__':
 
 
 
-    
-
+    for i in SHELL_LIST:    
+        commandType2(['chmod','+x',i])
 
     
 #    insert_in_file('*****\n', r"/Users/jaredcrace/data/tasks/owen_prj/owen_new_prj/Ubuntu_Script/src/test_file.txt", 'three')

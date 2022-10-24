@@ -40,6 +40,7 @@ systemctl -now enable auditd
 apt install systemd-journal-remote
 apt install sudo
 apt install net-tools
+apt install rename
 sudo apt autoremove
 
 

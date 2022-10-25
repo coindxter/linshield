@@ -83,14 +83,23 @@ if __name__ == '__main__':
     #    commandType2(['chmod','+x',i])
 
     
-    #command(['sudo','./apt_install.sh'])
-    #command(['sudo','./chmod_perms.sh'])
-    #command(['sudo','./cramfs_disable.sh'])
-    #command(['sudo','./ensureGroups_exist.sh'])
-    #command(['sudo','./passwdHashing_enforceing.sh'])
+    command(['sudo','./apt_install.sh'])
+    command(['sudo','./chmod_perms.sh'])
+    command(['sudo','./cramfs_disable.sh'])
+    command(['sudo','./ensureGroups_exist.sh'])
+    command(['sudo','./passwdHashing_enforceing.sh'])
     command(['sudo','./RDS_disable.sh'])
-
-
+    command(['sudo','./remove_.forwardFiles.sh'])
+    command(['sudo','./remove_.netrcFiles.sh'])
+    command(['sudo','./remove_.rhostsFiles.sh'])
+    command(['sudo','./rootPATH_integrity.sh'])
+    command(['sudo','./SCTP_disable.sh'])
+    command(['sudo','./squashfs_disable.sh'])
+    command(['sudo','./TIPC_disable.sh'])
+    command(['sudo','./udf_disable.sh'])
+    command(['sudo','./ufw_config.sh'])
+    command(['sudo','./USBstorage_disable.sh'])
+    command(['sudo','./usersHomes_exist.sh'])
 
 #    insert_in_file('*****\n', r"/Users/jaredcrace/data/tasks/owen_prj/owen_new_prj/Ubuntu_Script/src/test_file.txt", 'three')
 #    insert_in_file('dog\n', 'test_file.txt', 'test_marker')

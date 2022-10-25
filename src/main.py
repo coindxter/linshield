@@ -2,6 +2,11 @@ import argparse
 import subprocess
 import os
 
+SHELL_LIST = ['apt_install.sh','chmod_perms.sh','cramfs_disable.sh','RDS_disable.sh','SCTP_disable.sh',
+              'squashfs_disable.sh','TIPC_disable.sh','udf_disable.sh','ufw_config.sh','USBstorage_disable.sh',
+              'wirelessInterface_disable.sh','passwdHashing_enforceing.sh','ensureGroups_exist.sh','rootPATH_integrity.sh',
+              'usersHomes_exist.sh','remove_.netrcFiles.sh','remove_.forwardFiles.sh','remove_.rhostsFiles.sh']
+
 def insert_in_file(insert_str, file_name, search_str):
     with open(file_name, 'r+') as fd:
         contents = fd.readlines()
@@ -48,6 +53,11 @@ def command(arguments):
                          universal_newlines=True)
     print(process)
 
+def commandType2(arguments):
+    process = subprocess.run(arguments, 
+                         stdout=subprocess.PIPE, 
+                         universal_newlines=True)
+    print(process)
 
 if __name__ == '__main__':
     description_text = '''
@@ -67,14 +77,23 @@ if __name__ == '__main__':
                         help='verbose output',
                         default=None)
 
+    args = parser.parse_args()
 
+    #for i in SHELL_LIST:    
+    #    commandType2(['chmod','+x',i])
 
     
+    #command(['sudo','./apt_install.sh'])
+    #command(['sudo','./chmod_perms.sh'])
+    #command(['sudo','./cramfs_disable.sh'])
+    #command(['sudo','./ensureGroups_exist.sh'])
+    #command(['sudo','./passwdHashing_enforceing.sh'])
+    command(['sudo','./RDS_disable.sh'])
 
 
-    
+
 #    insert_in_file('*****\n', r"/Users/jaredcrace/data/tasks/owen_prj/owen_new_prj/Ubuntu_Script/src/test_file.txt", 'three')
-    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
+#    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
 
-    #append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
+#    append_to_file('fs.suid_dumpable = 0\n', 'test_file.txt')
 

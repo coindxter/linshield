@@ -1,4 +1,6 @@
 #!/bin/bash
+apt install plocate
+apt install vim
 apt install aide aide-common
 apt purge prelink
 apt purge apport
@@ -37,6 +39,8 @@ apt install auditd audispd-plugins
 systemctl -now enable auditd
 apt install systemd-journal-remote
 apt install sudo
-sudo autoremove
+apt install net-tools
+apt install rename
+sudo apt autoremove
 
 

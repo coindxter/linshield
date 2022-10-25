@@ -3,7 +3,6 @@ apt install plocate
 apt install vim
 apt install aide aide-common
 apt purge prelink
-apt purge apport
 apt purge autofs
 apt install chrony
 systemctl stop systemd-timesyncd.service

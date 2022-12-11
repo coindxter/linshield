@@ -1,6 +1,7 @@
 #!/bin/bash
 apt install plocate
 apt install vim
+apt install gcc
 apt install aide aide-common
 apt purge prelink
 apt purge autofs

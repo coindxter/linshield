@@ -8,10 +8,11 @@ Detailed Ubuntu 22.04 hardening script for Cyberpatriots\
 Make sure to mark main.py as an execuatable\
 [Link to CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing)\
 [Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)\
-What doesn't currently work: remove_.forwardFiles.sh, remove_.netrcFiles.sh, remove_.rhostFiles.sh, wirelessInterface_disable.sh\
 Some things to note:\
 READ THE README FILE ON THE IMAGE, it will give you critical information as to if you need to modify any of the scripting files. For example, if the README says that ssh is a critical service, go into the apt_install.sh and edit out the part where the script purges ssh\
-For some reason, script1.sh does not work when you git clone it. Go to the file in src and copy and paste it to a new text file and run chmod +x <txtfiletname> and then run it from there
+For some reason, script1.sh does not work when you git clone it. Go to the file in src and copy and paste it to a new text file and run chmod +x <txtfiletname> and then run it from there\
+There are two main sripts, main.py and script1.sh. main.py is my custom script and uses code that I wrote. Scrpit1.sh is not my script and wass writin by Ethan Fowler of Team-ByTE. Links to him and his team will be in [Acknowledgments](-Acknowledgments)
+
 
 
 ### Prerequisites
@@ -42,11 +43,11 @@ For some reason, script1.sh does not work when you git clone it. Go to the file 
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [x] example
-- [x] example
-- [ ] example
-- [ ] example
+What doesn't currently work
+  - [ ] remove_.forwardFiles.sh
+  - [ ] remove_.netrcFiles.sh
+  - [ ] remove_.rhostFiles.sh
+  - [ ] wirelessInterface_disable.sh
 - [ ] example
     - [ ] example
     - [ ] example

@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 This is a detailed Ubuntu 22.04 hardening script for Cyberpatriots\
-This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 virtual computer as polished as possible.
+This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 virtual computer as polished as possible. Thank you for using this project for your needs and please submit issues that you've come across and I will try to fix it as soon as possible (thank you for your patience in advance).
 
 <!-- GETTING STARTED -->
 ## Getting Started

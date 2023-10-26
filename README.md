@@ -76,11 +76,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Owen Crace - owencrace@gmaili.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/coindxter/ubushield)
+Project Link: [https://github.com/coindxter/ubuhield](https://github.com/coindxter/ubushield)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!

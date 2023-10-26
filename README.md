@@ -1,10 +1,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This is a detailed Ubuntu 22.04 hardening script for Cyberpatriots\
+This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 virtual computer as polished as possible.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Detailed Ubuntu 22.04 hardening script for Cyberpatriots\
 Make sure to mark main.py as an execuatable\
 [Link to CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing)\
 [Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)\

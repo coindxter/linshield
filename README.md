@@ -67,7 +67,7 @@ What will be added
   - [ ] Google Chrome benchmark script
 
   -Misolanious scripts/helper scripts
-    - [ ] Auto user passwordsd
+    - [ ] Auto user passwords
     - [ ] 
 
 

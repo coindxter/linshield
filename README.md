@@ -12,6 +12,10 @@ Some things to note:\
 READ THE README FILE ON THE IMAGE, it will give you critical information as to if you need to modify any of the scripting files. For example, if the README says that ssh is a critical service, go into the apt_install.sh and edit out the part where the script purges ssh. I have sperated these scripts so it is possible to make last miniute ajustment to better suit your needs.\
 There are two main sripts, main.py and script1.sh. main.py is my custom script and uses code that I wrote. Scrpit1.sh is not my script and was writin by Ethan Fowler of Team-ByTE. Links to him and his team will be in [Acknowledgments](#acknowledgments)
 
+<!-- Important Notes -->
+## IMPORTANT!
+
+
 
 
 ### Prerequisites
@@ -62,7 +66,7 @@ What will be added
   - [ ] Apache2 Configurater
 
 
-See the [open issues](https://github.com/Coin-Dexter/Minecraft-Hacks/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -88,7 +92,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Discord - [coindxter](https://discrodapp.com/users/728364815130820709)\
-Project Link: [https://github.com/coindxter/ubuhield](https://github.com/coindxter/ubushield)
+Project Link -  [https://github.com/coindxter/ubuhield](https://github.com/coindxter/ubushield)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments

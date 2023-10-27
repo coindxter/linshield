@@ -4,9 +4,6 @@ This is a detailed Ubuntu 22.04 hardening script for Cyberpatriots. This is not 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-[Link to CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing)\
-[Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)\
 Some things to note:\
 -READ THE README FILE ON THE IMAGE, it will give you critical information as to if you need to modify any of the scripting files. For example, if the README says that ssh is a critical service, go into the apt_install.sh and edit out the part where the script purges ssh. I have sperated these scripts so it is possible to make last miniute ajustment to better suit your needs.\
 -There are two main sripts, main.py and script1.sh. main.py is my custom script and uses code that I wrote. Scrpit1.sh is not my script and was writin by Ethan Fowler of Team-ByTE. Links to him and his team will be in [Acknowledgments](#acknowledgments)
@@ -15,7 +12,7 @@ Some things to note:\
 ## IMPORTANT!
 Please please please, ***NEVER EVER*** run programs in root. If you need to a command that requires root, just use sudo <command>. I beg you to do this. Running commands as root is useful, only if you know what you are doing, otherwise, it will screw up permisions of files you manipulate. All commands run in my scrpit make use of sudo instead of running the script as root.\
 
-Also, the main script does not work as of writing this, so just run each script on its own. For example
+Also, the main script does not work as of writing this, so just run each script on its own
 
 
 
@@ -50,6 +47,7 @@ If you want to use script1.sh, mark it as an executable
   ```sh
   sudo chmod +x script1.sh
   ```
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -57,6 +55,7 @@ If you want to use script1.sh, mark it as an executable
 
 <!-- ROADMAP -->
 ## Roadmap
+
 What doesn't currently work
   - [ ] remove_.forwardFiles.sh
   - [ ] remove_.netrcFiles.sh
@@ -72,8 +71,6 @@ What will be added
 Misolanious scripts/helper scripts
    - [ ] Auto user passwords (see issues)
     
-
-
 See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
@@ -104,4 +101,14 @@ Project Link -  [https://github.com/coindxter/ubuhield](https://github.com/coind
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+
 I would like to acknowledge Ethan Fowler for his script that I have implemnted in this script. This is the link to his [repository](https://github.com/ponkio/CyberPatriot/tree/master)
+
+<!-- RESOURCES -->
+## Resources
+
+[Link to CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing)\
+[Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)
+
+
+

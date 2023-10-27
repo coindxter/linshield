@@ -22,7 +22,7 @@ There are two main sripts, main.py and script1.sh. main.py is my custom script a
   ```
 * python3
   ```sh
-  sudo apt install
+  sudo apt-get install python3
   ```
 
 ### Installation
@@ -35,13 +35,18 @@ There are two main sripts, main.py and script1.sh. main.py is my custom script a
    ```sh
    sudo chmod +x main.py
    ```
+3. Then run main.py
+   ```sh
+   ./main.py
+   ```
+
 If you want to use script1.sh, mark it as an executable
   ```sh
   sudo chmod +x script1.sh
   ```
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+Please please please, never run programs in root. If you need to a command that requires root, just use sudo <command>. I beg you to do this. Running commands as root is useful, only if you know what you are doing, otherwise, it will screw up permisions of files you manipulate.
 
 <!-- ROADMAP -->
 ## Roadmap

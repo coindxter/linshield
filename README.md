@@ -33,7 +33,7 @@ There are two main sripts, main.py and script1.sh. main.py is my custom script a
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Coin-Dexter/Minecraft-Hacks.git
+   git clone https://github.com/coindxter/ubushield.git
    ```
 2. Mark main.py as an executable
    ```sh

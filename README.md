@@ -82,7 +82,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Discord - [coindxter](https://discrod.gg/coindxter)\
+Discord - [coindxter](https://discrodapp.com/users/728364815130820709)\
 Project Link: [https://github.com/coindxter/ubuhield](https://github.com/coindxter/ubushield)
 
 <!-- ACKNOWLEDGMENTS -->

@@ -64,6 +64,11 @@ What doesn't currently work
 What will be added
   - [ ] SSH Configurater
   - [ ] Apache2 Configurater
+  - [ ] Google Chrome benchmark script
+
+  -Misolanious scripts/helper scripts
+    - [ ] Auto user passwordsd
+    - [ ] 
 
 
 See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).

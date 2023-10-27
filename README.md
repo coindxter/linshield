@@ -5,8 +5,10 @@ This is a detailed Ubuntu 22.04 hardening script for Cyberpatriots. This is not 
 <!-- GETTING STARTED -->
 ## Getting Started
 Some things to note:\
--READ THE README FILE ON THE IMAGE, it will give you critical information as to if you need to modify any of the scripting files. For example, if the README says that ssh is a critical service, go into the apt_install.sh and edit out the part where the script purges ssh. I have sperated these scripts so it is possible to make last miniute ajustment to better suit your needs.\
--There are two main sripts, main.py and script1.sh. main.py is my custom script and uses code that I wrote. Scrpit1.sh is not my script and was writin by Ethan Fowler of Team-ByTE. Links to him and his team will be in [Acknowledgments](#acknowledgments)
+-READ THE README FILE ON THE IMAGE, it will give you critical information as to if you need to modify any of the scripting files. For example, if the README says that ssh is a critical service, go into the apt_install.sh and edit out the part where the script purges ssh. I have made it super easy to make last miniute adjustments to the scripts to better suit your needs.\
+-There are two main sripts, main.py and script1.sh. main.py is my custom script and uses code that I wrote. Scrpit1.sh is not my script and was writin by Ethan Fowler of Team-ByTE. Links to him and his team will be in [Acknowledgments](#acknowledgments)\
+-All scripts so far are copyed and pasted from the CIS benchmarks for [Ubuntu 22.04](https://drive.google.com/drive/folders/1iwv5_95D-gDa7hn9o9zfXLLVjZSOa_Oz) unless otherwise noted and most of them are not broken unlesss otherwies noted (see [Roadmap](#roadmap))
+
 
 <!-- Important Notes -->
 ## IMPORTANT!

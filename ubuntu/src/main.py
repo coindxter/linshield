@@ -101,7 +101,6 @@ if __name__ == '__main__':
     #command(['sudo','./USBstorage_disable.sh'])
     #command(['sudo','./usersHomes_exist.sh'])
 
-#    insert_in_file('*****\n', r"/Users/jaredcrace/data/tasks/owen_prj/owen_new_prj/Ubuntu_Script/src/test_file.txt", 'three')
 #    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
 
     #append_to_file('kernel.randomize_va_space = 2\n', '/etc/sysctl.conf')

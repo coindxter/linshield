@@ -83,25 +83,28 @@ if __name__ == '__main__':
     #    commandType2(['chmod','+x',i])
 
     
-    #command(['sudo','./apt_install.sh'])
-    #command(['sudo','./chmod_perms.sh'])
-    #command(['sudo','./cramfs_disable.sh'])
-    #command(['sudo','./ensureGroups_exist.sh'])
-    #command(['sudo','./passwdHashing_enforceing.sh'])
-    #command(['sudo','./RDS_disable.sh'])
-    #command(['sudo','./remove_.forwardFiles.sh'])
-    #command(['sudo','./remove_.netrcFiles.sh'])
-    #command(['sudo','./remove_.rhostsFiles.sh'])
-    #command(['sudo','./rootPATH_integrity.sh'])
-    #command(['sudo','./SCTP_disable.sh'])
-    #command(['sudo','./squashfs_disable.sh'])
-    #command(['sudo','./TIPC_disable.sh'])
-    #command(['sudo','./udf_disable.sh'])
-    #command(['sudo','./ufw_config.sh'])
-    #command(['sudo','./USBstorage_disable.sh'])
-    #command(['sudo','./usersHomes_exist.sh'])
+    command(['sudo','./apt_install.sh'])
+    command(['sudo','./chmod_perms.sh'])
+    command(['sudo','./cramfs_disable.sh'])
+    command(['sudo','./ensureGroups_exist.sh'])
+    command(['sudo','./passwdHashing_enforceing.sh'])
+    command(['sudo','./RDS_disable.sh'])
+    command(['sudo','./SCTP_disable.sh'])
+    command(['sudo','./squashfs_disable.sh'])
+    command(['sudo','./TIPC_disable.sh'])
+    command(['sudo','./udf_disable.sh'])
+    command(['sudo','./ufw_config.sh'])
+    command(['sudo','./USBstorage_disable.sh'])
+    command(['sudo','./usersHomes_exist.sh'])
 
-#    insert_in_file('dog\n', 'test_file.txt', 'test_marker')
+    #These scripts dont work
+        #command(['sudo','./remove_.forwardFiles.sh'])
+        #command(['sudo','./remove_.netrcFiles.sh'])
+        #command(['sudo','./remove_.rhostsFiles.sh'])
+        #command(['sudo','./rootPATH_integrity.sh'])
+
+    
+   
 
     #append_to_file('kernel.randomize_va_space = 2\n', '/etc/sysctl.conf')
     #append_to_file('#*               hard    core            0\n','/etc/security/limits.conf')

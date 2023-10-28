@@ -63,7 +63,7 @@ What doesn't currently work
   - [ ] remove_.netrcFiles.sh
   - [ ] remove_.rhostFiles.sh
   - [ ] wirelessInterface_disable.sh
-  - [ ] main.py
+  - [x] main.py
 
 What will be added
   - [ ] SSH Configurater

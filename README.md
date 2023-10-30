@@ -104,7 +104,7 @@ Project Link -  [https://github.com/coindxter/ubuhield](https://github.com/coind
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-I would like to acknowledge Ethan Fowler for his script that I have implemnted in this script. This is the link to his [repository](https://github.com/ponkio/CyberPatriot/tree/master)
+I would like to acknowledge Ethan Fowler for his script that I have implemnted in this project. This is the link to his [repository](https://github.com/ponkio/CyberPatriot/tree/master)
 
 <!-- RESOURCES -->
 ## Resources

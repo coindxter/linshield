@@ -36,11 +36,7 @@ Also, the main script does not work as of writing this, so just run each script 
    ```sh
    git clone https://github.com/coindxter/ubushield.git
    ```
-2. Mark main.py as an executable
-   ```sh
-   sudo chmod +x main.py
-   ```
-3. Then run main.py
+2. Run main.py
    ```sh
    ./main.py
    ```
@@ -110,7 +106,12 @@ I would like to acknowledge Ethan Fowler for his script that I have implemnted i
 ## Resources
 
 [Link to CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing)\
-[Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)
-
+[Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)\
+[ETA CyberPatriot Wiki](http://cypat.guru/index.php/Main_Page)\
+[Canonical Ubuntu 18.04 LTS Security Technical Implementation Guide](https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/)\
+[openstack/ansible-hardening](https://github.com/openstack/ansible-hardening)\
+[SELinux/Setup - Debian Wiki](https://wiki.debian.org/SELinux/Setup)\
+[SSL/TLS Strong Encryption: How-To - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)\
+[Apache Web Server Hardening and Security Guide](https://geekflare.com/apache-web-server-hardening-security/)\
 
 

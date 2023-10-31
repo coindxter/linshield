@@ -1,6 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a detailed Ubuntu 22.04 hardening script for Cyberpatriots. This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 virtual computer as polished as possible. Thank you for using this project for your needs and please submit issues that you've come across and I will try to fix it as soon as possible (thank you for your patience in advance).
+This is a detailed Ubuntu 22.04 and Debian 11 hardening script for Cyberpatriots. This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 and a Debian 11 virtual computer as polished as possible. Thank you for using this project for your needs and please submit issues that you've come across and me and my team will try to fix it as soon as possible (thank you for your patience in advance).
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -11,7 +11,7 @@ Some things to note:\
 
 <!-- Important Notes -->
 ## IMPORTANT!
-Please please please, ***NEVER EVER*** run programs in root. If you need to a command that requires root, just use sudo <command>. I beg you to do this. Running commands as root is useful, only if you know what you are doing, otherwise, it will screw up permisions of files you manipulate. All commands run in my scrpit make use of sudo instead of running the script as root.\
+Please please please, ***NEVER EVER*** run programs in root. If you need to a command that requires root, just use sudo "command". I beg you to do this. Running commands as root is useful, only if you know what you are doing, otherwise, it will screw up permisions of files you manipulate. All commands run in my scrpit make use of sudo instead of running the script as root.\
 
 Also, the main script does not work as of writing this, so just run each script on its own
 
@@ -35,7 +35,8 @@ Also, the main script does not work as of writing this, so just run each script 
    ```sh
    git clone https://github.com/coindxter/ubushield.git
    ```
-2. Move into the correct directory
+
+2. Move into the correct directory\
   For Ubuntu 
   ```sh
   cd /root/ubu/src/scr
@@ -43,7 +44,18 @@ Also, the main script does not work as of writing this, so just run each script 
 
   For Debian
   ```sh
-  cd /root/deb/src/cr
+  cd /root/deb/src/scr
+  ```
+
+3. Run main file\
+  For Ubuntu
+  ```sh
+  sudo bash main.py
+  ```
+
+  For Debian
+  ```sh
+  sudo -S bash harden.sh
   ```
 
 

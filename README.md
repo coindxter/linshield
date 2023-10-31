@@ -83,6 +83,7 @@ What will be added
   - [ ] SSH Configurater
   - [ ] Apache2 Configurater
   - [ ] Google Chrome benchmark script
+  - [ ] Implementation and Usage of Anti-Virus Software
         
 Misolanious scripts/helper scripts
   - [x] Auto user passwords (see issues)

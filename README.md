@@ -50,7 +50,7 @@ Also, the main script does not work as of writing this, so just run each script 
 
 ***3.*** Run main file
 
-  For Ubuntu
+  For Ubuntu:
   ```sh
   sudo bash main.py
   ```
@@ -60,15 +60,9 @@ Also, the main script does not work as of writing this, so just run each script 
   ```
 
 
-  For Debian
+  For Debian:
   ```sh
   sudo -S bash harden.sh
-  ```
-
-
-If you want to use script1.sh  , mark it as an executable
-  ```sh
-  sudo chmod +x script1.sh
   ```
 
 <!-- USAGE EXAMPLES -->
@@ -84,7 +78,6 @@ What doesn't currently work
   - [ ] remove_.netrcFiles.sh
   - [ ] remove_.rhostFiles.sh
   - [ ] wirelessInterface_disable.sh
-  - [x] main.py
 
 What will be added
   - [ ] SSH Configurater
@@ -92,7 +85,11 @@ What will be added
   - [ ] Google Chrome benchmark script
         
 Misolanious scripts/helper scripts
-   - [ ] Auto user passwords (see issues)
+  - [x] Auto user passwords (see issues)
+
+Testing
+  - [ ] Testing Debian scripts
+  - [x] Testing of Auto user passwords
     
 See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).
 

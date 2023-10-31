@@ -54,6 +54,11 @@ Also, the main script does not work as of writing this, so just run each script 
   ```sh
   sudo bash main.py
   ```
+  Or 
+  ```sh
+  sudo bash script1.py
+  ```
+
 
   For Debian
   ```sh
@@ -61,7 +66,7 @@ Also, the main script does not work as of writing this, so just run each script 
   ```
 
 
-If you want to use script1.sh, mark it as an executable
+If you want to use script1.sh  , mark it as an executable
   ```sh
   sudo chmod +x script1.sh
   ```
@@ -115,7 +120,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Discord - [coindxter](https://discrodapp.com/users/728364815130820709)\
-Project Link -  [https://github.com/coindxter/ubuhield](https://github.com/coindxter/ubushield)
+Project Link -  [https://github.com/coindxter/ubuhield](https://github.com/coindxter/linshield)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -132,6 +137,6 @@ I would like to acknowledge Ethan Fowler for his script that I have implemnted i
 [openstack/ansible-hardening](https://github.com/openstack/ansible-hardening)\
 [SELinux/Setup - Debian Wiki](https://wiki.debian.org/SELinux/Setup)\
 [SSL/TLS Strong Encryption: How-To - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)\
-[Apache Web Server Hardening and Security Guide](https://geekflare.com/apache-web-server-hardening-security/)\
+[Apache Web Server Hardening and Security Guide](https://geekflare.com/apache-web-server-hardening-security/)
 
 

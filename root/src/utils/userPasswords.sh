@@ -88,9 +88,13 @@ if [ "$consent" == "yes" ]; then
 
     echo "Passwords updated and password aging disabled for all users."
 
+    echo "$newPassword" | sudo tee /etc/secure_password.txt > /dev/null
+
+    echo "New password saved to /etc/secure_password.txt"
+
+else
+
+    echo "Nothing changed"
+
 fi
 
-# Save the new password for all users to a file
-echo "$newPassword" | sudo tee /etc/secure_password.txt > /dev/null
-
-echo "New password saved to /etc/secure_password.txt"

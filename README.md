@@ -1,12 +1,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a detailed Ubuntu 22.04 hardening script for Cyberpatriots. This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 virtual computer as polished as possible. Thank you for using this project for your needs and please submit issues that you've come across and I will try to fix it as soon as possible (thank you for your patience in advance).
+This is a detailed Ubuntu 22.04 hardening script for Cyberpatriots. This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 and Debian 11 virtual computer as polished as possible. Thank you for using this project for your needs and please submit issues that you've come across and I will try to fix it as soon as possible (thank you for your patience in advance).
 
 <!-- GETTING STARTED -->
 ## Getting Started
 Some things to note:\
 -READ THE README FILE ON THE IMAGE, it will give you critical information as to if you need to modify any of the scripting files. For example, if the README says that ssh is a critical service, go into the apt_install.sh and edit out the part where the script purges ssh. I have made it super easy to make last miniute adjustments to the scripts to better suit your needs.\
--There are two main sripts, main.py and script1.sh. main.py is my custom script and uses code that I wrote. Scrpit1.sh is not my script and was writin by Ethan Fowler of Team-ByTE. Links to him and his team will be in [Acknowledgments](#acknowledgments)\
 -All scripts so far are copyed and pasted from the CIS benchmarks for [Ubuntu 22.04](https://drive.google.com/drive/folders/1iwv5_95D-gDa7hn9o9zfXLLVjZSOa_Oz) unless otherwise noted and most of them are not broken unlesss otherwise noted (see [Roadmap](#roadmap))
 
 
@@ -36,10 +35,17 @@ Also, the main script does not work as of writing this, so just run each script 
    ```sh
    git clone https://github.com/coindxter/ubushield.git
    ```
-2. Run main.py
-   ```sh
-   ./main.py
-   ```
+2. Move into the correct directory
+  For Ubuntu 
+  ```sh
+  cd /root/ubu/src/scr
+  ```
+
+  For Debian
+  ```sh
+  cd /root/deb/src/cr
+  ```
+
 
 If you want to use script1.sh, mark it as an executable
   ```sh

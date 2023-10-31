@@ -37,6 +37,7 @@ Also, the main script does not work as of writing this, so just run each script 
    ```
 
 2. Move into the correct directory\
+
   For Ubuntu 
   ```sh
   cd /root/ubu/src/scr
@@ -48,6 +49,7 @@ Also, the main script does not work as of writing this, so just run each script 
   ```
 
 3. Run main file\
+
   For Ubuntu
   ```sh
   sudo bash main.py

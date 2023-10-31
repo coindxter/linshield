@@ -36,7 +36,7 @@ Also, the main script does not work as of writing this, so just run each script 
    git clone https://github.com/coindxter/ubushield.git
    ```
 
-2. Move into the correct directory\
+2. Move into the correct directory
 
   For Ubuntu 
   ```sh
@@ -48,7 +48,7 @@ Also, the main script does not work as of writing this, so just run each script 
   cd /root/deb/src/scr
   ```
 
-3. Run main file\
+3. Run main file
 
   For Ubuntu
   ```sh

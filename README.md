@@ -11,7 +11,7 @@ Some things to note:\
 
 <!-- Important Notes -->
 ## IMPORTANT!
-Please please please, ***NEVER EVER*** run programs in root. If you need to a command that requires root, just use sudo "command". I beg you to do this. Running commands as root is useful, only if you know what you are doing, otherwise, it will screw up permisions of files you manipulate. All commands run in my scrpit make use of sudo instead of running the script as root.\
+Please please please, **NEVER EVER** run programs in root. If you need to a command that requires root, just use sudo "command". I beg you to do this. Running commands as root is useful, only if you know what you are doing, otherwise, it will screw up permisions of files you manipulate. All commands run in my scrpit make use of sudo instead of running the script as root.\
 
 Also, the main script does not work as of writing this, so just run each script on its own
 
@@ -31,12 +31,12 @@ Also, the main script does not work as of writing this, so just run each script 
 
 ### Installation
 
-***1.*** Clone the repo
+**1.** Clone the repo
    ```sh
    git clone https://github.com/coindxter/ubushield.git
    ```
 
-***2.*** Move into the correct directory
+**2.** Move into the correct directory
 
   For Ubuntu 
   ```sh
@@ -48,7 +48,7 @@ Also, the main script does not work as of writing this, so just run each script 
   cd /root/deb/src/scr
   ```
 
-***3.*** Run main file
+**3.** Run main file
 
   For Ubuntu:
   ```sh

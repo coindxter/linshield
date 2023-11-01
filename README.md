@@ -62,7 +62,7 @@ Also, the main script does not work as of writing this, so just run each script 
 
   For Debian:
   ```sh
-  sudo -S bash harden.sh
+  sudo -S source harden.sh
   ```
 
 <!-- USAGE EXAMPLES -->
@@ -86,10 +86,10 @@ What will be added
   - [ ] Implementation and Usage of Anti-Virus Software
         
 Misolanious scripts/helper scripts
-  - [x] Auto user passwords (see issues)
+  - [x] Auto User Passwords (see issues)
 
 Testing
-  - [ ] Testing Debian scripts
+  - [x] Test Majority Debian Scripts
   - [x] Testing of Auto user passwords
     
 See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).

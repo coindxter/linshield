@@ -50,9 +50,9 @@ echo "Unauthorized admins: ${unauthorizedAdmins[*]}"
 echo "Missing admins: ${missingAdmins[*]}"
 
 # Ask for consent to fix issues
-read -p "Would you like to fix these issues? (yes/no): " consent
+read -p "Would you like to fix these issues? (y/n): " consent
 
-if [ "$consent" == "yes" ]; then
+if [ "$consent" == "y" ]; then
     # Remove unauthorized users
     for user in "${unauthorizedUsers[@]}"; do
         sudo userdel -r "$user"

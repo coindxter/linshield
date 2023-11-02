@@ -282,9 +282,9 @@ harden() {
         if [[ $(modpri $dir) != xx ]]; then
             mod $(modname $dir)
         fi
-    done
+     done
   
-  done
+  
 
 
 }

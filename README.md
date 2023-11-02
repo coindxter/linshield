@@ -27,6 +27,7 @@ Also, the main script does not work as of writing this, so just run each script 
   ```sh
   sudo apt-get install python3
   ```
+* github token for cloing
 
 ### Installation
 

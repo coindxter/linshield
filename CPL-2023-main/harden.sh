@@ -21,23 +21,6 @@ umask 0027
 # These numbers are for Cole's Surface 7 and your mileage may vary
 
 
-PS3='Would you like to use Coles settings? (1/2) '
-options=("y" "n")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "y")
-            echo "You have opted to use Cole settings"
-            xrandr -s 2560x1600
-            break
-            ;;
-        "n")
-            break
-            ;;
-        *) echo "invalid option $REPLY";;
-    esac
-done 
-
 # ====================
 # Sanity Checks
 # ====================
@@ -352,6 +335,26 @@ mod() {
     touch $DATA/mods/$mod
     [[ $status = failed ]] && perror "Module $mod finished with errors"
 }
+
+
+PS3='Would you like to use Coles settings? (1/2) '
+options=("y" "n")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "y")
+            echo "You have opted to use Cole settings"
+            xrandr -s 2560x1600
+            break
+            ;;
+        "n")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done 
+
+
 
 psuccess "Invoke 'harden' to secure to machine"
 

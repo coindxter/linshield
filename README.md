@@ -36,7 +36,7 @@ Also, the main script does not work as of writing this, so just run each script 
 
 **1.** Clone the repo
    ```sh
-   git clone https://github.com/coindxter/ubushield.git
+   git clone https://github.com/coindxter/linshield.git
    ```
 **2.** Enter your github username
 

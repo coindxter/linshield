@@ -17,7 +17,6 @@ Also, the main script does not work as of writing this, so just run each script 
 
 
 
-
 ### Prerequisites
 
 * git
@@ -130,6 +129,7 @@ I would like to acknowledge Ethan Fowler for his script that I have implemnted i
 
 [Link to CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing)\
 [Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)\
+[Link to Round 2 Debian Practice Image 2023](https://docs.google.com/document/d/10vg4U3EpGVp7VSqat-g2Pg2Qn-7W2-x4ySpIYPXFS-w/edit)
 [ETA CyberPatriot Wiki](http://cypat.guru/index.php/Main_Page)\
 [Canonical Ubuntu 18.04 LTS Security Technical Implementation Guide](https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/)\
 [openstack/ansible-hardening](https://github.com/openstack/ansible-hardening)\

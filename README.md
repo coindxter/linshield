@@ -38,8 +38,11 @@ Also, the main script does not work as of writing this, so just run each script 
    ```sh
    git clone https://github.com/coindxter/ubushield.git
    ```
+**2.** Enter your github username
 
-**2.** Move into the correct directory
+**3.** Enter your github token NOT YOUR GITHUB PASSWORD
+
+**4.** Move into the correct directory
 
   For Ubuntu 
   ```sh
@@ -51,7 +54,7 @@ Also, the main script does not work as of writing this, so just run each script 
   cd /root/deb/src/scr
   ```
 
-**3.** Run main file
+**5.** Run main file
 
   For Ubuntu:
   ```sh

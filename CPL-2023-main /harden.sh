@@ -278,11 +278,15 @@ harden() {
     # TODO: https://www.open-scap.org/security-policies/scap-security-guide/#install
     # TODO: systemd/{system,user}.comf
 
-    for dir in $BASE/mods/??.*/; do
+     for dir in $BASE/mods/??.*/; do
         if [[ $(modpri $dir) != xx ]]; then
             mod $(modname $dir)
         fi
     done
+  
+  done
+
+
 }
 # runs a single unmasked module
 mod() {

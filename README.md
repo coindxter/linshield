@@ -74,8 +74,6 @@ Also, the main script does not work as of writing this, so just run each script 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -113,6 +111,27 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+Directory's are organized as follows:
+
+    root
+      |
+      |_archive
+      |
+      |_deb(debian)
+      |   |
+      |   |_src(source)
+      |     |
+      |     |_scr(script)
+      |
+      |_ubu(ubutu)
+          |
+          |_src(source)
+              |
+              |_scr(script)
+
+Please keep this file structure like this as it will keep everything organized. Everything Debian related will go under root/deb and everything ubuntu related will go under root/ubu. Both root/deb and root/ubu have source files that will have everything for each programs and there will be scr/ for all scripts related to the topic. 
+
 
 <!-- LICENSE -->
 ## License

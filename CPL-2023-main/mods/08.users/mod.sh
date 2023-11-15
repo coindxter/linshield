@@ -51,7 +51,7 @@ psuccess "Configured PAM / local user policy"
 
 # Change passwords
 pinfo 'Change passwords (might take a while)...'
-sed '/^$/d;s/^ *//;s/ *$//;s/$/:P@ssw0rd312!/' "$DATA/authorized_users" > "$DATA/chpw"
+sed '/^$/d;s/^ *//;s/ *$//;s/$/:Student123!/' "$DATA/authorized_users" > "$DATA/chpw"
 autologin_user=$(cat $DATA/autologin_user | xargs)
 grep -Ev "^$autologin_user:" "$DATA/chpw" > "$DATA/chpw.new"
 mv -f "$DATA/chpw"{.new,}

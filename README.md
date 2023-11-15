@@ -83,6 +83,7 @@ What doesn't currently work
   - [ ] remove_.rhostFiles.sh
   - [ ] wirelessInterface_disable.sh
 
+
 What will be added
   - [ ] SSH Configurater
   - [ ] Apache2 Configurater
@@ -90,11 +91,13 @@ What will be added
   - [ ] Implementation and Usage of Anti-Virus Software
         
 Misolanious scripts/helper scripts
-  - [x] Auto User Passwords (see issues)
-
+ - [ ]
+ - [ ] 
+ 
 Testing
-  - [x] Test Majority Debian Scripts
-  - [x] Testing of Auto user passwords
+  - [ ]
+  - [ ] 
+  
     
 See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).
 

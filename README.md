@@ -122,17 +122,22 @@ Directory's are organized as follows:
       |
       |_archive
       |
+      |_util(helper scripts)
+      |
       |_deb(debian)
       |   |
       |   |_src(source)
       |     |
       |     |_scr(script)
+      |     
       |
       |_ubu(ubutu)
           |
           |_src(source)
               |
               |_scr(script)
+      
+              
 
 Please keep this file structure like this as it will keep everything organized. Everything Debian related will go under root/deb and everything ubuntu related will go under root/ubu. Both root/deb and root/ubu have source files that will have everything for each programs and there will be scr/ for all scripts related to the topic. 
 

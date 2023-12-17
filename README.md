@@ -99,7 +99,7 @@ Testing
   - [ ] 
   
 
-See [here](https://docs.google.com/document/d/1-FsZslNIoV-RhUrHJwwTRpoqesvRpsoWxYrz_h87TeI/edit?usp=sharing) for a more extensive to-do list
+See [here](https://docs.google.com/document/d/1-FsZslNIoV-RhUrHJwwTRpoqesvRpsoWxYrz_h87TeI/edit?usp=sharing) for a more extensive to-do list\
 See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->

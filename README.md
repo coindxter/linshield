@@ -89,6 +89,7 @@ What will be added
   - [ ] Apache2 Configurater
   - [ ] Google Chrome benchmark script
   - [ ] Implementation and Usage of Anti-Virus Software
+  - [ ] AppArmor Implemntation for both Debian and Ubuntu
         
 Misolanious scripts/helper scripts
  - [ ]

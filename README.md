@@ -143,7 +143,7 @@ Directory's are organized as follows:
       
               
 
-Please keep this file structure like this as it will keep everything organized. Everything Debian related will go under root/deb and everything ubuntu related will go under root/ubu. Both root/deb and root/ubu have source files that will have everything for each programs and there will be scr/ for all scripts related to the topic. 
+Please keep this file structure like this as it will keep everything organized. Everything Debian related will go under root/deb and everything ubuntu related will go under root/ubu. Both root/deb and root/ubu have source files that will have everything for each programs and there will be scr/ for all scripts related to the topic. As compitition grows, add new linux flavors appropriately. 
 
 
 <!-- LICENSE -->
@@ -176,4 +176,6 @@ I would like to acknowledge Ethan Fowler for his script that I have implemnted i
 [SSL/TLS Strong Encryption: How-To - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)\
 [Apache Web Server Hardening and Security Guide](https://geekflare.com/apache-web-server-hardening-security/)
 
-
+<!-- Issues -->
+## Issues
+For all issues, see [here.](https://github.com/coindxter/linshield/issues) Report issues as soon as they happen, they might get fixed. If they don't feel free to fix them yourself.

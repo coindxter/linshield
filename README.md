@@ -178,4 +178,4 @@ I would like to acknowledge Ethan Fowler for his script that I have implemnted i
 
 <!-- Issues -->
 ## Issues
-For all issues, see [here.](https://github.com/coindxter/linshield/issues) Report issues as soon as they happen, they might get fixed. If they don't feel free to fix them yourself.
+For all issues, see [here.](https://github.com/coindxter/linshield/issues) Report issues as soon as they happen, they might get fixed. If they don't, feel free to fix them yourself.

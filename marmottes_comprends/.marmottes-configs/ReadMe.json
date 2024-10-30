@@ -1,0 +1,58 @@
+{
+    "all_users": [
+        {
+            "account_type": "admin",
+            "groups": [],
+            "name": "house"
+        },
+        {
+            "account_type": "admin",
+            "groups": [],
+            "name": "cuddy"
+        },
+        {
+            "account_type": "standard",
+            "groups": [],
+            "name": "chase"
+        },
+        {
+            "account_type": "standard",
+            "groups": [],
+            "name": "foreman"
+        },
+        {
+            "account_type": "standard",
+            "groups": [],
+            "name": "cameron"
+        },
+        {
+            "account_type": "standard",
+            "groups": [],
+            "name": "kutner"
+        },
+        {
+            "account_type": "standard",
+            "groups": [],
+            "name": "taub"
+        },
+        {
+            "account_type": "standard",
+            "groups": [],
+            "name": "tamblyn"
+        }
+    ],
+    "critical_services": [
+        "OpenSSH Server (sshd)",
+        "FTP (vsftpd)"
+    ],
+    "markdown_summary": "# Aeacus README 22.04.1\n\n## Unique Identifier\nEnsure to enter a valid Team ID to avoid VM malfunction.\n\n## Forensics Questions\nScored questions are located on the Desktop; read thoroughly before modifying.\n\n## Competition Scenario\n- Password protected user accounts are required.\n- Non-work related media and hacking tools are prohibited.\n- The operating system must remain as 22.04.1; no upgrades are allowed.\n- Authorized users must access via SSH and vsftpd.\n\n## New User Creation\nCreate a new standard user account named \"thirteen\" with a chosen temporary password.",
+    "new_users": [
+        {
+            "account_type": "standard",
+            "groups": [],
+            "name": "thirteen",
+            "password": "temporary_password"
+        }
+    ],
+    "title": "Aeacus README 22.04.1"
+}

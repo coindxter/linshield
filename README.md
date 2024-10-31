@@ -31,7 +31,7 @@ Also, the main script does not work as of writing this, so just run each script 
   ```sh
   pip install openai
   ```
-* github token for cloning the repo\Contact me for the token
+* github token for cloning the repo. Contact me for the token
 
 
 

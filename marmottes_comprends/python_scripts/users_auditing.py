@@ -12,7 +12,7 @@ if __name__ != '__main__':
     print('This isn\'t the main program')
     exit(0)
 
-with open('../.marmottes-configs/ReadMe.json', 'r') as file:
+with open('../.ReadMe-configs/ReadMe.json', 'r') as file:
     data = json.load(file)
 
 admins = [user for user in data['all_users'] if user['account_type'] == 'admin']

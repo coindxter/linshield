@@ -1,4 +1,0 @@
-- Download from https://github.com/ItzSt0rmz/CPL-2023
-- Unzip
-- Cd into its location 
-- sudo -s source harden.sh

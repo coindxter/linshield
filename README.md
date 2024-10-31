@@ -27,6 +27,10 @@ Also, the main script does not work as of writing this, so just run each script 
   ```sh
   sudo apt-get install python3
   ```
+* openai
+  ```sh
+  pip install openai
+  ```
 * github token for cloning
 [how to make one](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 

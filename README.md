@@ -44,7 +44,11 @@ Also, the main script does not work as of writing this, so just run each script 
    ```
 **2.** Enter your github username
 
-**3.** Enter your github token NOT YOUR GITHUB PASSWORD
+**3.** Enter the github token 
+    ```sh
+    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
+    ```
+
 
 **4.** Move into the correct directory
 

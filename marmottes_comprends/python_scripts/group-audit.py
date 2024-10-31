@@ -3,7 +3,7 @@ import json
 
 groups = dict(zip([x.split(":")[0] for x in subprocess.run('awk -F\':\' \'$4 {print}\' /etc/group | grep -v "sudo" | grep -v "adm" | grep -v "audio" | grep -v "cdrom"', shell=True, stdout=subprocess.PIPE).stdout.decode('utf-8').strip().split('\n')], [x.split(":")[-1].split(",") for x in subprocess.run('awk -F\':\' \'$4 {print}\' /etc/group | grep -v "sudo" | grep -v "adm" | grep -v "audio" | grep -v "cdrom"', shell=True, stdout=subprocess.PIPE).stdout.decode('utf-8').strip().split('\n')]))
 
-with open('.marmottes-configs/ReadMe.json') as f:
+with open('../.marmottes-configs/ReadMe.json') as f:
     readme = json.load(f)
     users = readme['all_users']
     for user in readme['new_users']:

@@ -1,7 +1,3 @@
-# Ubuntu Prohibited Files Script
-# By: Eoin Shearer
-# Build: 08,19,24
-
 # locate and remove MP3 files backup before deleting
 MP3_FILES=$(locate -r '\.mp3$')
 if [ "$MP3_FILES" != "" ]; then

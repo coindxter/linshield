@@ -1,7 +1,3 @@
-# Ubuntu Defensive Countermeasures Script
-# By: Eoin Shearer
-# Build: 08,19,24
-
 # Enable UFW
 sudo ufw enable
 # Remove UFW past configurations

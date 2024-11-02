@@ -1,7 +1,3 @@
-# Ubuntu Security Policies Script
-# By: Eoin Shearer
-# Build: 08,19,24
-
 # X Server does not allow TCP connections
 sudo sh -c 'echo "nolisten tcp" >> /etc/X11/xinit/xserverrc'
 # Address space layout randomization enabled

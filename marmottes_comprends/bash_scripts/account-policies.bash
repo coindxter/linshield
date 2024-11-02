@@ -1,11 +1,7 @@
-# Ubuntu Account Policies Script
-# By: Eoin Shearer
-# Build: 08,19,24
-
 # Disable Guest account 
 sudo sh -c 'echo "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf'
-# Set Root password to 'sigmasauce'
-echo -e "sigmasauce\nsigmasauce" | sudo passwd root
+# Set Root password to 'Student123!'
+echo -e "Student123!\nStudent123!" | sudo passwd root
 # Hash passwords with SHA-512
 sudo authconfig --passalgo=sha512 --update
 # Set maximum password age to 90 days

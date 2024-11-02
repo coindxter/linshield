@@ -58,3 +58,4 @@ sudo apt-get install --only-upgrade tilda
 sudo apt-get install --only-upgrade vsftpd
 # update wordpress
 sudo apt-get install --only-upgrade wordpress
+# update install vim

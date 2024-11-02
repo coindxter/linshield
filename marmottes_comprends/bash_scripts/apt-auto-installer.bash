@@ -1,7 +1,3 @@
-# Ubuntu APT-AUTO-INSTALLER Script
-# By: Eoin Shearer
-# Build: 08,19,24
-
 # Determine the OS number and version
 OS_NAME=$(lsb_release -si)
 OS_VERSION=$(lsb_release -sr)

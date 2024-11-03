@@ -1,19 +1,27 @@
-# locate and remove MP3 files backup before deleting
-MP3_FILES=$(locate -r '\.mp3$')
-if [ "$MP3_FILES" != "" ]; then
-    echo "The following MP3 files were found:"
+#!/bin/bash
+
+# Directory to search in
+SEARCH_DIR="/home"
+
+# Find all .mp3 files and remove them
+MP3_FILES=$(find "$SEARCH_DIR" -type f -name "*.mp3" 2>/dev/null)
+
+# Check if any .mp3 files were found
+if [ -n "$MP3_FILES" ]; then
+    echo "The following MP3 files were found and will be removed:"
     echo "$MP3_FILES"
-    echo -n "Do you want to remove these files? (y/n) " && read REMOVE_MP3
-    LOC="../backups/mp3_files.$(date +%Y-%m-%d)"
-    if [ ! -d "$LOC" ]; then
-        mkdir "$LOC"
-    fi
-    if [ "$REMOVE_MP3" == "y" ]; then
-        sudo cp -r "$MP3_FILES" "$LOC"
-        sudo rm -r "$MP3_FILES"
+    echo
+    # Prompt for confirmation with default to 'yes'
+    read -p "Are you sure you want to delete these files? [Y/n] " CONFIRM
+    if [[ -z "$CONFIRM" || "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
+        # Remove the found .mp3 files
+        find "$SEARCH_DIR" -type f -name "*.mp3" -exec rm -f {} \;
+        echo "MP3 files have been removed."
     else
-        echo "Skipping MP3 files"
+        echo "Operation cancelled. No files were removed."
     fi
+else
+    echo "No MP3 files were found."
 fi
 
 #Will be adding more file checks for passwords and stuff in the future, at the moment this is what I got

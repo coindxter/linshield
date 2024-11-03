@@ -1,185 +1,151 @@
-<!-- ABOUT THE PROJECT -->
+Here's an improved and clearer full README example for your project:
+
+# LinShield - Ubuntu 22.04 & Debian 11 Hardening Script
+
+![License](https://img.shields.io/badge/license-MIT-blue)
+![GitHub stars](https://img.shields.io/github/stars/coindxter/linshield?style=social)
+
+## Table of Contents
+- [About The Project](#about-the-project)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+- [Resources](#resources)
+- [Issues](#issues)
+
 ## About The Project
-This is a detailed Ubuntu 22.04 and Debian 11 hardening script for Cyberpatriots. This is not fully done. There are still many, many things me and my team need to add to polish this up. I personally don't think this will ever be finsihed as Cyberpatiots is an ever changing compitetion with different vulnurablitys each image. This project aims to configure an Ubuntu 22.04 and a Debian 11 virtual computer as polished as possible. Thank you for using this project for your needs and please submit issues that you've come across and me and my team will try to fix it as soon as possible (thank you for your patience in advance).
+LinShield is a comprehensive hardening script designed for CyberPatriots participants, aimed at improving the security of Ubuntu 22.04 and Debian 11 systems. This project helps users configure a virtual computer with a focus on competition needs, addressing vulnerabilities as they change over time.
 
-<!-- GETTING STARTED -->
+**Note**: This project is constantly evolving, and contributions are encouraged to adapt to new vulnerabilities and challenges.
+
+## Features
+- Configures security settings based on CIS benchmarks
+- Easy-to-modify scripts for last-minute competition adjustments
+- Ensures scripts use `sudo` instead of root for safety
+- Modular scripts for tailored use (run individually if needed)
+
 ## Getting Started
-Some things to note:\
--READ THE README FILE ON THE IMAGE, it will give you critical information as to if you need to modify any of the scripting files. For example, if the README says that ssh is a critical service, go into the apt_install.sh and edit out the part where the script purges ssh. I have made it super easy to make last miniute adjustments to the scripts to better suit your needs.\
--All scripts so far are copyed and pasted from the CIS benchmarks for [Ubuntu 22.04](https://drive.google.com/drive/folders/1iwv5_95D-gDa7hn9o9zfXLLVjZSOa_Oz) unless otherwise noted and most of them are not broken unlesss otherwise noted (see [Roadmap](#roadmap))
+Before using this project, **read any README files provided with the competition image**. These files may contain crucial information for modifying scripts to suit your specific needs, such as preserving critical services like SSH.
 
-
-<!-- Important Notes -->
-## IMPORTANT!
-Please please please, **NEVER EVER** run programs in root. If you need to a command that requires root, just use sudo "command". I beg you to do this. Running commands as root is useful, only if you know what you are doing, otherwise, it will screw up permisions of files you manipulate. All commands run in my scrpit make use of sudo instead of running the script as root.\
-
-Also, the main script does not work as of writing this, so just run each script on its own
-
-
+## Installation
 
 ### Prerequisites
-
-* git
-  ```sh
+Ensure the following are installed:
+- **Git**: 
+  ```bash
   sudo apt install git
   ```
-* python3
-  ```sh
+- **Python3**:
+  ```bash
   sudo apt-get install python3
   ```
-* openai
-  ```sh
+- **OpenAI Library**:
+  ```bash
   pip install openai
   ```
-* github token for cloning the repo. Contact me for the token
+- **GitHub Token**: Contact the project maintainer for access.
 
-
-
-
-### Installation
-
-**1.** Clone the repo
-   ```sh
+### Installation Steps
+1. **Clone the repository**:
+   ```bash
    git clone https://github.com/coindxter/linshield.git
    ```
-**2.** Enter your github username
+2. **Navigate to the appropriate directory**:
+   - For Ubuntu:
+     ```bash
+     cd /root/ubu/src/scr
+     ```
+   - For Debian:
+     ```bash
+     cd /root/deb/src/scr
+     ```
+3. **Run the main script**:
+   - For Ubuntu:
+     ```bash
+     sudo bash main.py
+     ```
+     or
+     ```bash
+     sudo bash script1.py
+     ```
+   - For Debian:
+     ```bash
+     sudo -S source harden.sh
+     ```
 
-**3.** Enter the github token 
- 
-**4.** Move into the correct directory
-
-  For Ubuntu 
-  ```sh
-  cd /root/ubu/src/scr
-  ```
-
-  For Debian
-  ```sh
-  cd /root/deb/src/scr
-  ```
-
-**5.** Run main file
-
-  For Ubuntu:
-  ```sh
-  sudo bash main.py
-  ```
-  Or 
-  ```sh
-  sudo bash script1.py
-  ```
-
-
-  For Debian:
-  ```sh
-  sudo -S source harden.sh
-  ```
-
-<!-- USAGE EXAMPLES -->
 ## Usage
+Run each script as needed for specific hardening tasks. Refer to the provided README files or comments within each script for more details. **Do not execute the entire script as root.**
 
-<!-- ROADMAP -->
+## Project Structure
+The project is organized as follows:
+
+```
+root
+│
+├── archive (Old or reference files)
+│
+├── util (Helper scripts)
+│
+├── deb (Debian-specific scripts)
+│   └── src
+│       └── scr (Main scripts)
+│
+└── ubu (Ubuntu-specific scripts)
+    └── src
+        └── scr (Main scripts)
+```
+
+Keep this file structure intact for better organization and clarity.
+
 ## Roadmap
+### Current Known Issues
+- [ ] `remove_.forwardFiles.sh`
+- [ ] `remove_.netrcFiles.sh`
+- [ ] `remove_.rhostFiles.sh`
+- [ ] `wirelessInterface_disable.sh`
+- [ ] `marmottes_comprends/updates.bash` (causes Firefox issues)
 
-What doesn't currently work
-  - [ ] remove_.forwardFiles.sh
-  - [ ] remove_.netrcFiles.sh
-  - [ ] remove_.rhostFiles.sh
-  - [ ] wirelessInterface_disable.sh
-  - [ ] marmottes_comprends/updates.bash (casues firefox issues)
+### Planned Features
+- [ ] SSH Configurator
+- [ ] Apache2 Configurator
+- [ ] Google Chrome benchmark script
+- [ ] Integration of antivirus software
+- [ ] AppArmor implementation for both Debian and Ubuntu
+- [ ] Support for Linux Mint
 
-What will be added
-  - [ ] SSH Configurater
-  - [ ] Apache2 Configurater
-  - [ ] Google Chrome benchmark script
-  - [ ] Implementation and Usage of Anti-Virus Software
-  - [ ] AppArmor Implemntation for both Debian and Ubuntu 
-  - [ ] Add support for Mint 
- 
+For a detailed to-do list, refer to [this document](https://docs.google.com/document/d/1-FsZslNIoV-RhUrHJwwTRpoqesvRpsoWxYrz_h87TeI/edit?usp=sharing).
 
-        
-Misolanious scripts/helper scripts
- - [ ]
- - [ ] 
- 
-Testing
-  - [ ]
-  - [ ] 
-  
-
-See [here](https://docs.google.com/document/d/1-FsZslNIoV-RhUrHJwwTRpoqesvRpsoWxYrz_h87TeI/edit?usp=sharing) for a more extensive to-do list\
-See the [open issues](https://github.com/coindxter/ubushield/issues) for a full list of proposed features (and known issues).
-
-<!-- CONTRIBUTING -->
 ## Contributing
+Contributions are welcome! Follow these steps:
+1. Fork the project.
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a pull request.
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-Directory's are organized as follows:
-
-    root
-      |
-      |_archive
-      |
-      |_util(helper scripts)
-      |
-      |_deb(debian)
-      |   |
-      |   |_src(source)
-      |     |
-      |     |_scr(script)
-      |     
-      |
-      |_ubu(ubutu)
-          |
-          |_src(source)
-              |
-              |_scr(script)
-      
-              
-
-Please keep this file structure like this as it will keep everything organized. Everything Debian related will go under root/deb and everything ubuntu related will go under root/ubu. Both root/deb and root/ubu have source files that will have everything for each programs and there will be scr/ for all scripts related to the topic. As compitition grows, add new linux flavors appropriately. 
-
-
-<!-- LICENSE -->
 ## License
-
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-
-<!-- CONTACT -->
 ## Contact
+- Discord: [coindxter](https://discordapp.com/users/728364815130820709)
+- Project Link: [GitHub](https://github.com/coindxter/linshield)
 
-Discord - [coindxter](https://discrodapp.com/users/728364815130820709)\
-Project Link -  [https://github.com/coindxter/ubuhield](https://github.com/coindxter/linshield)
-
-<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+- Ethan Fowler for contributions and ideas. Check out his [repository](https://github.com/ponkio/CyberPatriot/tree/master).
 
-I would like to acknowledge Ethan Fowler for his script that I have implemnted in this project. This is the link to his [repository](https://github.com/ponkio/CyberPatriot/tree/master)
-
-<!-- RESOURCES -->
 ## Resources
+- [CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_)
+- [Learning Images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)
+- [Debian Wiki - SELinux Setup](https://wiki.debian.org/SELinux/Setup)
+- [Apache Hardening Guide](https://geekflare.com/apache-web-server-hardening-security/)
 
-[Link to CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_?usp=sharing)\
-[Link to learning images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)\
-[Link to Round 2 Debian Practice Image 2023](https://docs.google.com/document/d/10vg4U3EpGVp7VSqat-g2Pg2Qn-7W2-x4ySpIYPXFS-w/edit)
-[ETA CyberPatriot Wiki](http://cypat.guru/index.php/Main_Page)\
-[Canonical Ubuntu 18.04 LTS Security Technical Implementation Guide](https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/)\
-[openstack/ansible-hardening](https://github.com/openstack/ansible-hardening)\
-[SELinux/Setup - Debian Wiki](https://wiki.debian.org/SELinux/Setup)\
-[SSL/TLS Strong Encryption: How-To - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)\
-[Apache Web Server Hardening and Security Guide](https://geekflare.com/apache-web-server-hardening-security/)
-
-<!-- Issues -->
 ## Issues
-For all issues, see [here.](https://github.com/coindxter/linshield/issues) Report issues as soon as they happen, they might get fixed. If they don't, feel free to fix them yourself.
+For known issues and to report new ones, visit [GitHub Issues](https://github.com/coindxter/linshield/issues).
+

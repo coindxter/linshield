@@ -1,6 +1,4 @@
-# Ubuntu Operating System Updates Script
-# By: Eoin Shearer
-# Build: 08,19,24
+#1/bin/bash
 
 # Check automatically for updates daily
 sudo dpkg-reconfigure -plow unattended-upgrades
@@ -28,8 +26,12 @@ sudo apt-get install --only-upgrade bind9
 sudo apt-get install --only-upgrade bind9utils
 # update FileZilla
 sudo apt-get install --only-upgrade filezilla
+
+
 # update Firefox
-sudo apt-get install --only-upgrade firefox
+#sudo apt-get install --only-upgrade firefox
+
+
 # update GIMP
 sudo apt-get install --only-upgrade gimp
 # update icewweasel
@@ -59,3 +61,4 @@ sudo apt-get install --only-upgrade vsftpd
 # update wordpress
 sudo apt-get install --only-upgrade wordpress
 # update install vim
+sudo apt-get install --only-upgrade vim

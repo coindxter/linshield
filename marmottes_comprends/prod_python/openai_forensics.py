@@ -307,7 +307,7 @@ else:
         forensic_files = [f"/home/{cdir}/Desktop/{x}".replace('\n', '') for x in desktop_files.split("\n") if "forensic" in x.lower() and x.lower().replace('\n', '').replace("\r","").endswith(".txt")]
     for i, file in enumerate(forensic_files):
         if os.name == "nt":
-            print(f"{i+1}. {file.replace(f'C:\\Users\\{cdir}\\Desktop\\', '')}")
+            print(f"{i+1}. {file.replace(f'C:\\\\Users\\\\{cdir}\\\\Desktop\\\\', '')}")
         else:
             print(f"{i+1}. {file.replace(f'/home/{cdir}/Desktop/', '')}")
     file_choice = int(input("Choose a file: "))

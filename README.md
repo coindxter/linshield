@@ -86,7 +86,7 @@ What doesn't currently work
   - [ ] remove_.netrcFiles.sh
   - [ ] remove_.rhostFiles.sh
   - [ ] wirelessInterface_disable.sh
-
+  - [ ] marmottes_comprends/updates.bash (casues firefox issues)
 
 What will be added
   - [ ] SSH Configurater

@@ -1,7 +1,7 @@
 # Disable Guest account 
 sudo sh -c 'echo "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf'
 # Set Root password to 'Student123!'
-echo -e "Student123!\nStudent123!" | sudo passwd root
+echo "root:Student123!" | sudo chpasswd
 # Hash passwords with SHA-512
 sudo authconfig --passalgo=sha512 --update
 # Set maximum password age to 90 days

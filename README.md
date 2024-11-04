@@ -21,7 +21,7 @@ Here's an improved and clearer full README example for your project:
 - [Issues](#issues)
 
 ## About The Project
-LinShield is a comprehensive hardening script designed for CyberPatriots participants, aimed at improving the security of Linux systems. This project helps users configure a virtual computer with a focus on competition needs, addressing vulnerabilities as they change over time.
+Linshield is a comprehensive hardening script designed for CyberPatriots participants, aimed at improving the security of Linux systems. This project helps users configure a virtual computer with a focus on competition needs, addressing vulnerabilities as they change over time.
 
 **Note**: This project is constantly evolving, and contributions are encouraged to adapt to new vulnerabilities and challenges.
 
@@ -57,28 +57,17 @@ Ensure the following are installed:
    ```bash
    git clone https://github.com/coindxter/linshield.git
    ```
-2. **Navigate to the appropriate directory**:
-   - For Ubuntu:
-     ```bash
-     cd /root/ubu/src/scr
-     ```
-   - For Debian:
-     ```bash
-     cd /root/deb/src/scr
-     ```
-3. **Run the main script**:
-   - For Ubuntu:
-     ```bash
-     sudo bash main.py
-     ```
-     or
-     ```bash
-     sudo bash script1.py
-     ```
-   - For Debian:
-     ```bash
-     sudo -S source harden.sh
-     ```
+2. **Enter GitHub username**
+   
+3. **Enter the Repository token**
+
+4. **Run the main script**(doesn't currently work, please run scripts individually:
+   ```bash
+   sudo python3 main.py
+   ```
+   
+  
+
 
 ## Usage
 Run each script as needed for specific hardening tasks. Refer to the provided README files or comments within each script for more details. **Do not execute the entire script as root.**

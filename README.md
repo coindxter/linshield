@@ -39,7 +39,9 @@ Before using this project, **read any README files provided with the competition
 
 ### Prerequisites
 
-#### On the VM
+- **GitHub Token**: Contact the project maintainer for access.
+
+#### On the VM:
 Ensure the following are installed:
 - **Git**: 
   ```bash
@@ -57,8 +59,9 @@ Ensure the following are installed:
   ```bash
   pip install jsonschema
   ``` 
+#### On the Host Machine:
 
-- **GitHub Token**: Contact the project maintainer for access.
+- **Ensure that you are using the lastest versoin of VMware Workstatoin Pro.**It is free and easy to use and using snapshots saves so much time.
 
 ### Installation Steps
 1. **Clone the repository**:

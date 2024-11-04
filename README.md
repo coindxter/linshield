@@ -28,7 +28,7 @@ LinShield is a comprehensive hardening script designed for CyberPatriots partici
 ## Features
 - Configures security settings based on CIS benchmarks
 - Easy-to-modify scripts for last-minute competition adjustments
-- Ensures scripts use `sudo` instead of root for safety
+- AI! Uses Chatgpt 4o to create custom configs for scripts
 - Modular scripts for tailored use (run individually if needed)
 
 ## Getting Started

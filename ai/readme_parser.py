@@ -4,15 +4,13 @@ import jsonschema
 from jsonschema import validate
 import openai
 
-# Check if the API key is loaded from the environment variable
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    raise EnvironmentError("OPENAI_API_KEY not set in environment. Please set it as an environment variable.")
+#api_key = os.getenv("OPENAI_API_KEY")
+#if not api_key:
+#    raise EnvironmentError("OPENAI_API_KEY not set in environment. Please set it as an environment variable.")
+api_key = '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'
 
-# Initialize the OpenAI client
-openai.api_key = api_key  # Use the API key securely fetched from the environment
+openai.api_key = api_key  
 
-# Define the JSON Schema for validation
 schema = {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "structured_readme",
@@ -35,7 +33,7 @@ schema = {
                     }
                 },
                 "required": ["name", "groups", "account_type"],
-                "additionalProperties": false
+                "additionalProperties": False
             }
         },
         "new_users": {
@@ -55,7 +53,7 @@ schema = {
                     "password": {"type": "string"}
                 },
                 "required": ["name", "groups", "account_type", "password"],
-                "additionalProperties": false
+                "additionalProperties": False
             }
         },
         "critical_services": {
@@ -65,15 +63,14 @@ schema = {
         "markdown_summary": {"type": "string"}
     },
     "required": ["title", "all_users", "new_users", "critical_services", "markdown_summary"],
-    "additionalProperties": false
+    "additionalProperties": False
 }
 
-# Function to read the README file content
 def read_readme_file(file_path):
+    file_path = os.path.expanduser(file_path) 
     with open(file_path, "r") as file:
         return file.read()
 
-# Function to validate JSON output against the schema
 def validate_json_output(json_data):
     try:
         validate(instance=json_data, schema=schema)
@@ -81,12 +78,9 @@ def validate_json_output(json_data):
     except jsonschema.exceptions.ValidationError as err:
         print(f"JSON output is invalid: {err.message}")
 
-# Main function to process the README and save the JSON output
 def process_readme_to_json(input_file_path, output_folder_path):
-    # Read the README content from the specified file
     readme_content = read_readme_file(input_file_path)
 
-    # Define the prompt with instructions
     prompt = (
         "You are an expert at structured data extraction. You will be given unstructured text from a Cyber Patriot "
         "ReadMe and should convert it into the given structure. This data must include the title (name of the image), "
@@ -97,36 +91,22 @@ def process_readme_to_json(input_file_path, output_folder_path):
         f"{readme_content}"
     )
 
-    # Send the prompt and README content to the OpenAI API for structured data extraction using GPT-4
     response = openai.ChatCompletion.create(
-        model="gpt-4",  # Specify GPT-4 model
+        model="gpt-3.5-turbo-0125",  # Specify GPT-4 model
         messages=[
             {"role": "user", "content": prompt}
         ]
     )
 
-    # Parse the API response and format the JSON
     formatted_json = json.loads(response['choices'][0]['message']['content'])
-
-    # Validate the formatted JSON against the schema
     validate_json_output(formatted_json)
-
-    # Ensure the output directory exists
     if not os.path.exists(output_folder_path):
         os.makedirs(output_folder_path)
-
-    # Construct the full path for the output file
     output_file_path = os.path.join(output_folder_path, "ReadMe.json")
-
-    # Write the formatted JSON to the file
     with open(output_file_path, "w") as file:
         file.write(json.dumps(formatted_json, indent=4))
-
     print(f"JSON output has been written to {output_file_path}")
 
-# Example usage: Adjust the paths as necessary
-input_readme_path = "path/to/your/README.txt"  # Path to your input README file
-output_directory_path = "../.ReadMe-configs"   
-
-# Run the function
+input_readme_path = os.path.expanduser("~/Desktop/linshield/.ReadMe-configs/ReadMe.html")
+output_directory_path = os.path.expanduser("../.ReadMe-configs/")
 process_readme_to_json(input_readme_path, output_directory_path)

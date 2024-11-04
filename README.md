@@ -19,7 +19,10 @@
 - [Issues](#issues)
 
 ## About The Project
-Linshield is a comprehensive hardening script designed for CyberPatriots participants, aimed at improving the security of Linux systems. This project helps users configure a virtual computer with a focus on competition needs, addressing vulnerabilities as they change over time.
+Linshield is a comprehensive hardening script designed for CyberPatriots participants, aimed at improving the security of Linux systems. This project helps users configure a virtual computer with a focus on competition needs, addressing vulnerabilities as they change over time. 
+
+## The Goal
+The goal of this project is to script the CIS Benchmarks for Ubuntu, Debian, Mint, etc, and to complete Cyberpatriot compitions fast and as efficient as possible.
 
 **Note**: This project is constantly evolving, and contributions are encouraged to adapt to new vulnerabilities and challenges.
 
@@ -35,6 +38,8 @@ Before using this project, **read any README files provided with the competition
 ## Installation
 
 ### Prerequisites
+
+#### On the VM
 Ensure the following are installed:
 - **Git**: 
   ```bash
@@ -101,13 +106,16 @@ Keep this file structure intact for better organization and clarity.
 - [ ] `wirelessInterface_disable.sh`
 - [ ] `updates.bash` (causes Firefox issues)
 
+
 ### Planned Features
 - [ ] SSH Configurator
 - [ ] Apache2 Configurator
 - [ ] Google Chrome benchmark script
 - [ ] Integration of antivirus software
-- [x] AppArmor implementation for both Debian and Ubuntu
 - [ ] Support for Linux Mint
+- [ ] ReadMe paser
+- [ ] Forensics question solver
+
 
 For a detailed to-do list, refer to [this document](https://docs.google.com/document/d/1-FsZslNIoV-RhUrHJwwTRpoqesvRpsoWxYrz_h87TeI/edit?usp=sharing).
 
@@ -129,11 +137,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Acknowledgments
 Thank you to my Cyberpatriot team members for ideas and scripts that they have found or made. And esspecially Chatgpt.
 
-## Resources
+## Resources and Extra stuff
 - [CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_)
 - [Learning Images](https://drive.google.com/drive/u/1/folders/1w9VY57FTUfuPinmd2CvVs-oA5N03URW6)
 - [Debian Wiki - SELinux Setup](https://wiki.debian.org/SELinux/Setup)
 - [Apache Hardening Guide](https://geekflare.com/apache-web-server-hardening-security/)
+- [Configurator Windows](https://cyberpatriots.nyc3.cdn.digitaloceanspaces.com/scripts/go/build_configs.exe) (Windows only)
 
 ## Issues
 For known issues and to report new ones, visit [GitHub Issues](https://github.com/coindxter/linshield/issues).

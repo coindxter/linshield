@@ -48,7 +48,7 @@ Ensure the following are installed:
   ```bash
   pip install openai
   ```
--**jsonschema library**:
+- **jsonschema library**:
   ```bash
   pip install jsonschema
   ``` 

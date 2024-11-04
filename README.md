@@ -78,7 +78,7 @@ The project is organized as follows:
 ```
 root
 │
-├── archive (Old or reference files)
+|
 │
 ├── util (Helper scripts)
 │
@@ -99,7 +99,7 @@ Keep this file structure intact for better organization and clarity.
 - [ ] `remove_.netrcFiles.sh`
 - [ ] `remove_.rhostFiles.sh`
 - [ ] `wirelessInterface_disable.sh`
-- [ ] `marmottes_comprends/updates.bash` (causes Firefox issues)
+- [ ] `updates.bash` (causes Firefox issues)
 
 ### Planned Features
 - [ ] SSH Configurator
@@ -127,7 +127,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 - Project Link: [GitHub](https://github.com/coindxter/linshield)
 
 ## Acknowledgments
-- Ethan Fowler for contributions and ideas. Check out his [repository](https://github.com/ponkio/CyberPatriot/tree/master).
+Thank you to my Cyberpatriot team members for ideas and scripts that they have found or made. And esspecially Chatgpt.
 
 ## Resources
 - [CIS Benchmarks](https://drive.google.com/drive/folders/1ypIhhKznlM7kV1YDaFEKwkTnpdsPZXk_)

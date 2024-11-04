@@ -61,7 +61,7 @@ Ensure the following are installed:
   ``` 
 #### On the Host Machine:
 
-- **Ensure that you are using the lastest versoin of VMware Workstatoin Pro.**It is free and easy to use and using snapshots saves so much time.
+- **Ensure that you are using the lastest versoin of VMware Workstatoin Pro**It is free and easy to use and using snapshots saves so much time.
 
 ### Installation Steps
 1. **Clone the repository**:

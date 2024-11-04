@@ -1,3 +1,0 @@
-account [success=1 new_authtok_reqd=1 default=die]    pam_unix.so
-account required                                      pam_permit.so
-account required                                      pam_tally2.so

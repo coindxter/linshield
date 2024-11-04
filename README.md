@@ -1,5 +1,3 @@
-Here's an improved and clearer full README example for your project:
-
 # LinShield - Ubuntu 22.04 & Debian 11 Hardening Script
 
 ![License](https://img.shields.io/badge/license-MIT-blue)

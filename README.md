@@ -21,7 +21,7 @@ Here's an improved and clearer full README example for your project:
 - [Issues](#issues)
 
 ## About The Project
-LinShield is a comprehensive hardening script designed for CyberPatriots participants, aimed at improving the security of Ubuntu 22.04 and Debian 11 systems. This project helps users configure a virtual computer with a focus on competition needs, addressing vulnerabilities as they change over time.
+LinShield is a comprehensive hardening script designed for CyberPatriots participants, aimed at improving the security of Linux systems. This project helps users configure a virtual computer with a focus on competition needs, addressing vulnerabilities as they change over time.
 
 **Note**: This project is constantly evolving, and contributions are encouraged to adapt to new vulnerabilities and challenges.
 

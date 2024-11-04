@@ -4,12 +4,12 @@ import jsonschema
 from jsonschema import validate
 import openai
 
-#api_key = os.getenv("OPENAI_API_KEY")
-#if not api_key:
-#    raise EnvironmentError("OPENAI_API_KEY not set in environment. Please set it as an environment variable.")
-api_key = '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'
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise EnvironmentError("OPENAI_API_KEY not set in environment. Please set it as an environment variable.")
 
-openai.api_key = api_key  
+
+openai.api_key = api_key 
 
 schema = {
     "$schema": "http://json-schema.org/draft-07/schema#",
@@ -67,16 +67,20 @@ schema = {
 }
 
 def read_readme_file(file_path):
-    file_path = os.path.expanduser(file_path) 
+    print(f"Reading README file from {file_path}...")
     with open(file_path, "r") as file:
-        return file.read()
+        content = file.read()
+    print("README content read successfully.")
+    return content
 
 def validate_json_output(json_data):
+    print("Starting JSON validation...")
     try:
         validate(instance=json_data, schema=schema)
         print("JSON output is valid.")
     except jsonschema.exceptions.ValidationError as err:
         print(f"JSON output is invalid: {err.message}")
+        raise
 
 def process_readme_to_json(input_file_path, output_folder_path):
     readme_content = read_readme_file(input_file_path)
@@ -91,22 +95,49 @@ def process_readme_to_json(input_file_path, output_folder_path):
         f"{readme_content}"
     )
 
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0125",  # Specify GPT-4 model
-        messages=[
-            {"role": "user", "content": prompt}
-        ]
-    )
+    print("Sending prompt to OpenAI API...")
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4",  # Specify GPT-4 model
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+        print("Response received from OpenAI API.")
+    except Exception as e:
+        print(f"An error occurred while contacting the OpenAI API: {e}")
+        return
 
-    formatted_json = json.loads(response['choices'][0]['message']['content'])
-    validate_json_output(formatted_json)
+    print("Raw response from API:", response)
+
+    try:
+        formatted_json = json.loads(response['choices'][0]['message']['content'])
+        print("Formatted JSON parsed successfully.")
+    except Exception as e:
+        print(f"Error parsing the JSON response: {e}")
+        return
+
+    try:
+        validate_json_output(formatted_json)
+    except Exception as e:
+        print(f"JSON validation failed: {e}")
+        return
+
     if not os.path.exists(output_folder_path):
+        print(f"Creating output directory at {output_folder_path}...")
         os.makedirs(output_folder_path)
-    output_file_path = os.path.join(output_folder_path, "ReadMe.json")
-    with open(output_file_path, "w") as file:
-        file.write(json.dumps(formatted_json, indent=4))
-    print(f"JSON output has been written to {output_file_path}")
+        print("Output directory created.")
 
-input_readme_path = os.path.expanduser("~/Desktop/linshield/.ReadMe-configs/ReadMe.html")
-output_directory_path = os.path.expanduser("../.ReadMe-configs/")
+    output_file_path = os.path.join(output_folder_path, "ReadMe.json")
+
+    try:
+        with open(output_file_path, "w") as file:
+            file.write(json.dumps(formatted_json, indent=4))
+        print(f"JSON output has been written to {output_file_path}")
+    except Exception as e:
+        print(f"An error occurred while writing the JSON to the file: {e}")
+
+input_readme_path = "~/Desktop/linsheild/.ReadMe-configs/ReadMe.html"  # Path to your input README file
+output_directory_path = "../.ReadMe-configs"   # Path to your output directory
+
 process_readme_to_json(input_readme_path, output_directory_path)

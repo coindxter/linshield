@@ -26,7 +26,7 @@ Linshield is a comprehensive hardening script designed for CyberPatriots partici
 ## Features
 - Configures security settings based on CIS benchmarks
 - Easy-to-modify scripts for last-minute competition adjustments
-- AI! Uses Chatgpt 4o to create custom configs for scripts
+- Ai! Uses Chatgpt 4o to create custom configs for scripts
 - Modular scripts for tailored use (run individually if needed)
 
 ## Getting Started
@@ -48,6 +48,11 @@ Ensure the following are installed:
   ```bash
   pip install openai
   ```
+-**jsonschema library**:
+  ```bash
+  pip install jsonschema
+  ``` 
+
 - **GitHub Token**: Contact the project maintainer for access.
 
 ### Installation Steps
@@ -63,9 +68,6 @@ Ensure the following are installed:
    ```bash
    sudo python3 main.py
    ```
-   
-  
-
 
 ## Usage
 Run each script as needed for specific hardening tasks. Refer to the provided README files or comments within each script for more details. **Do not execute the entire script as root.**
@@ -104,7 +106,7 @@ Keep this file structure intact for better organization and clarity.
 - [ ] Apache2 Configurator
 - [ ] Google Chrome benchmark script
 - [ ] Integration of antivirus software
-- [ ] AppArmor implementation for both Debian and Ubuntu
+- [x] AppArmor implementation for both Debian and Ubuntu
 - [ ] Support for Linux Mint
 
 For a detailed to-do list, refer to [this document](https://docs.google.com/document/d/1-FsZslNIoV-RhUrHJwwTRpoqesvRpsoWxYrz_h87TeI/edit?usp=sharing).

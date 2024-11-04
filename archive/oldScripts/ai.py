@@ -1,5 +1,6 @@
 from openai import OpenAI
 import json
+import os
 client = OpenAI(
     base_url="https://marmottesjourney.myphone.education/v1",
     api_key="1debf3b82095e69c9ee98d348b164973b1b8812cd34d9ca255fb8eaf94465e9f7ac08822f8bef1f1dd3db9793b1ac870180e5af552972efd6592915634e920f3",
@@ -172,4 +173,11 @@ ANSWER KEY
   ]
 )
 
-print(json.dumps(json.loads(completion.choices[0].message.content), indent=4))
+formatted_json = json.dumps(json.loads(completion.choices[0].message.content), indent=4)
+output_path = os.path.join("..", ".ReadMe-configs", "ReadMe.json")
+
+
+with open(output_path, "w") as file:
+    file.write(formatted_json)
+
+print(f"JSON output has been written to {output_path}")

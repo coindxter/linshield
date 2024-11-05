@@ -40,3 +40,4 @@ To run this script, you need to set up your OPENAI_API_KEY in your environment.
       - **Variable value**: `your_secure_api_key`
 4. Click **OK** and restart your Command Prompt or computer for the changes to take effect.
 
+## Note that this script works sometimes for some reason, I'm unsure why. Run the script again and again if it doesn't work the first few times.

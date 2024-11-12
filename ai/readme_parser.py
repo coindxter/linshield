@@ -4,6 +4,7 @@ import jsonschema
 from jsonschema import validate
 import openai
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
@@ -67,18 +68,15 @@ schema = {
 }
 
 def read_html_readme_file(file_path):
-    file_path = os.path.expanduser(file_path)
     print(f"Reading and parsing HTML README file from {file_path}...")
     try:
-        with open(file_path, "r", encoding="utf-8") as file:
-            content = file.read()
+        content = file_path.read_text(encoding="utf-8")
     except FileNotFoundError:
         print(f"File not found: {file_path}")
         raise
 
     soup = BeautifulSoup(content, "html.parser")
-    plain_text = soup.get_text() 
-
+    plain_text = soup.get_text()
     print("HTML README content parsed successfully.")
     return plain_text
 
@@ -92,13 +90,19 @@ def validate_json_output(json_data):
         raise
 
 def process_readme_to_json(input_file_path, output_folder_path):
+    if not input_file_path.exists():
+        raise FileNotFoundError(f"Input file not found: {input_file_path}")
+    
+    output_folder_path.mkdir(parents=True, exist_ok=True)
+    output_file_path = output_folder_path / "ReadMe.json"
+
     readme_content = read_html_readme_file(input_file_path)
 
     prompt = (
         "You are an expert at structured data extraction. You will be given unstructured text from a Cyber Patriot "
         "ReadMe and should convert it into the given structure. This data must include the title (name of the image), "
         "all users (all authorized users), new users (any additional users the document asks to create), critical "
-        "services, and a markdown summary. For each user, you **must** mention the groups they're apart of, the "
+        "services, and a markdown summary. For each user, you **must** mention the groups they're a part of, the "
         "account name, and permissions they should have (admin or not). The data should be in JSON format. You may "
         "only output JSON and nothing else! Your response should be in the format of the JSON Schema.\n\n"
         f"{readme_content}"
@@ -118,47 +122,38 @@ def process_readme_to_json(input_file_path, output_folder_path):
     try:
         raw_content = response['choices'][0]['message']['content']
         json_content = raw_content.strip("```json\n").strip("```")
-
-        print("Raw JSON content (after stripping Markdown):", json_content)
-
         parsed_json = json.loads(json_content)
-        
+
         if not isinstance(parsed_json, dict):
             raise TypeError("Parsed JSON is not a dictionary. Check the response format.")
 
         print("Formatted JSON parsed successfully.")
 
         parsed_json['markdown_summary'] = parsed_json.pop('summary', "")
-
-        all_users = []
-        for user in parsed_json.pop('users', []):
-            user_data = {
+        
+        all_users = [
+            {
                 "name": user["account_name"],
                 "account_type": "admin" if user["permissions"] == "admin" else "standard",
                 "groups": user["groups"]
             }
-            all_users.append(user_data)
-
+            for user in parsed_json.pop('users', [])
+        ]
         parsed_json["all_users"] = all_users
 
-        new_users = []
-        for new_user in parsed_json.get("new_users", []):
-            new_user["name"] = new_user.pop("account_name")
-            new_user["account_type"] = "admin" if new_user["permissions"] == "admin" else "standard"
-            new_user["password"] = "default_password" 
-            new_user.pop("permissions", None)  
-            new_users.append(new_user)
+        new_users = [
+            {
+                "name": new_user.pop("account_name"),
+                "account_type": "admin" if new_user.pop("permissions", "") == "admin" else "standard",
+                "groups": new_user["groups"],
+                "password": "default_password"
+            }
+            for new_user in parsed_json.get("new_users", [])
+        ]
+        parsed_json["new_users"] = new_users
 
-        parsed_json["new_users"] = new_users 
-
-    except json.JSONDecodeError as e:
+    except (json.JSONDecodeError, TypeError) as e:
         print(f"Error parsing the JSON response: {e}")
-        return
-    except TypeError as e:
-        print(f"Type error during JSON handling: {e}")
-        return
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
         return
 
     try:
@@ -167,21 +162,14 @@ def process_readme_to_json(input_file_path, output_folder_path):
         print(f"JSON validation failed: {e}")
         return
 
-    if not os.path.exists(output_folder_path):
-        print(f"Creating output directory at {output_folder_path}...")
-        os.makedirs(output_folder_path)
-        print("Output directory created.")
-
-    output_file_path = os.path.join(output_folder_path, "ReadMe.json")
-
     try:
-        with open(output_file_path, "w", encoding="utf-8") as file:
+        with output_file_path.open("w", encoding="utf-8") as file:
             file.write(json.dumps(parsed_json, indent=4))
         print(f"JSON output has been written to {output_file_path}")
     except Exception as e:
         print(f"An error occurred while writing the JSON to the file: {e}")
 
-input_readme_path = "~/Desktop/linshield/.ReadMe-configs/ReadMe.html"  # Path to your input HTML README file
-output_directory_path = "~/Desktop/linshield/.ReadMe-configs/"          # Path to your output directory
+input_readme_path = Path("~/Desktop/linshield/.ReadMe-configs/ReadMe.html").expanduser()
+output_directory_path = Path("~/Desktop/linshield/.ReadMe-configs/").expanduser()
 
 process_readme_to_json(input_readme_path, output_directory_path)

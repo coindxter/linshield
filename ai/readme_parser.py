@@ -8,7 +8,7 @@ from pathlib import Path
 
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
-    raise EnvironmentError("OPENAI_API_KEY not set in environment. Please set it as an environment variable.")
+    raise EnvironmentError("OPENAI_API_KEY not set in environment. Please set it as an environment variable. View Instructions are in ai/ReadMe.md")
 
 openai.api_key = api_key
 
@@ -100,11 +100,13 @@ def process_readme_to_json(input_file_path, output_folder_path):
 
     prompt = (
         "You are an expert at structured data extraction. You will be given unstructured text from a Cyber Patriot "
-        "ReadMe and should convert it into the given structure. This data must include the title (name of the image), "
+        "ReadMe and should convert it into the given structure. This data **must** include the title (name of the image), "
         "all users (all authorized users), new users (any additional users the document asks to create), critical "
-        "services, and a markdown summary. For each user, you **must** mention the groups they're a part of, the "
+        "services (apache2, sshd, etc), and a markdown summary. For each user, you **must** mention the groups they're a part of, the "
         "account name, and permissions they should have (admin or not). The data should be in JSON format. You may "
-        "only output JSON and nothing else! Your response should be in the format of the JSON Schema.\n\n"
+        "only output JSON and nothing else! Your response should be in the format of the JSON Schema."
+        "Some common errors that you need to look out for since I will be checking this with the JSON Schema:"
+        "1. Error parsing the JSON response: string indices must be integers, not 'str'\n\n"
         f"{readme_content}"
     )
 
@@ -152,7 +154,10 @@ def process_readme_to_json(input_file_path, output_folder_path):
         ]
         parsed_json["new_users"] = new_users
 
-    except (json.JSONDecodeError, TypeError) as e:
+
+    #force convert into a integer
+    #common error: Error parsing the JSON response: string indices must be integers, not 'str'
+    except (json.JSONDecodeError, TypeError) as e:      
         print(f"Error parsing the JSON response: {e}")
         return
 

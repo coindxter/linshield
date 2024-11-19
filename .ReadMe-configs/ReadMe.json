@@ -1,0 +1,120 @@
+{
+    "title": "Aperture Science Ubuntu 22.04 README",
+    "new_users": [
+        {
+            "name": "caroline",
+            "account_type": "standard",
+            "groups": [
+                "aperturestaff"
+            ],
+            "password": "default_password"
+        },
+        {
+            "name": "chell",
+            "account_type": "standard",
+            "groups": [
+                "testsubjects"
+            ],
+            "password": "default_password"
+        }
+    ],
+    "critical_services": [
+        "OpenSSH Server (SSH)",
+        "FTP Server (vsftpd)",
+        "Apache Server (apache2)"
+    ],
+    "markdown_summary": "",
+    "all_users": [
+        {
+            "name": "ratman",
+            "account_type": "admin",
+            "groups": [
+                "aperturestaff"
+            ]
+        },
+        {
+            "name": "cjohnson",
+            "account_type": "admin",
+            "groups": []
+        },
+        {
+            "name": "atlas",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "avance",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "bcalhoun",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "caroline",
+            "account_type": "standard",
+            "groups": [
+                "aperturestaff"
+            ]
+        },
+        {
+            "name": "chell",
+            "account_type": "standard",
+            "groups": [
+                "testsubjects"
+            ]
+        },
+        {
+            "name": "companioncube",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "evance",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "factcore",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "gfreeman",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "glados",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "gman",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "pbody",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "rick",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "spacecore",
+            "account_type": "standard",
+            "groups": []
+        },
+        {
+            "name": "turret",
+            "account_type": "standard",
+            "groups": []
+        }
+    ]
+}

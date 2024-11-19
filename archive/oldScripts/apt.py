@@ -27,7 +27,9 @@ def getPackageLists(critical_services, current_packages):
         "telnet",
         "rdesktop",
         "hashcat",
-        "tcpflow"
+        "tcpflow",
+        "4g8",
+        "deluge"
     ])
     # Define the data payload
     data = {

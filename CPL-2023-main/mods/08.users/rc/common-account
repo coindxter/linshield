@@ -5,5 +5,8 @@
 
 
 account required     pam_access.so accessfile=/etc/security/login_access.conf 
+
+
+#maybe dont use ldap unless already there
 account sufficient      pam_ldap.so
 account	required	pam_unix.so

@@ -155,8 +155,9 @@ def process_readme_to_json(input_file_path, output_folder_path):
         parsed_json["new_users"] = new_users
 
 
-    #force convert into a integer
-    #common error: Error parsing the JSON response: string indices must be integers, not 'str'
+    # force convert into a integer
+    # common error: Error parsing the JSON response: string indices must be integers, not 'str'
+    # this breaks it and makes it so that it doesnt work all the time, only sometimes
     except (json.JSONDecodeError, TypeError) as e:      
         print(f"Error parsing the JSON response: {e}")
         return

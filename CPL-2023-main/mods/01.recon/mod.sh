@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+pwarn() { echo "[WARN] $1"; }
+pignore() { echo "[INFO] $1"; }
+perror() { echo "[ERROR] $1" >&2; }
+mod() { echo "[MOD] Placeholder for $1"; }
+todo() { echo "[TODO] $1"; }
+
 pkgchk() {
     if dpkg-query -W -f='${Status}' "$1" 2>/dev/null | grep -q 'install ok installed'; then
         if (($# > 1)); then

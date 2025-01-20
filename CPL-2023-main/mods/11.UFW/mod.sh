@@ -10,6 +10,7 @@ chmod 751 /lib/ufw
 ufw --force reset
 
 # Copy and apply ufw-sysctl.conf
+RC="/path/to/config/"
 cp "$RC/ufw-sysctl.conf" "/etc/ufw/sysctl.conf"
 
 # Enable UFW
@@ -34,4 +35,3 @@ ufw deny 111
 psuccess "Configured UFW"
 
 # See also: 11 - Network Sec
-

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+psuccess() { echo "[SUCCESS] $1"; }
+
 # Set root ownership and permissions for the root directory
 chown root:root /
 chmod 751 /

@@ -1,9 +1,38 @@
 #!/usr/bin/env bash
 
+# Define instconf function
+instconf() {
+    cp "$1" "$2" && echo "[SUCCESS] Copied $1 to $2" || echo "[ERROR] Failed to copy $1 to $2"
+}
+
+# Define pinfo function
+pinfo() {
+    echo "[INFO] $1"
+}
+
+# Define ptodo function
+ptodo() {
+    echo "[TODO] $1"
+}
+
+# Define psuccess function
+psuccess() {
+    echo "[SUCCESS] $1"
+}
+
+# Define perror function (optional for error handling)
+perror() {
+    echo "[ERROR] $1" >&2
+}
+
+
 # Add tmpfs entries to /etc/fstab
 echo "tmpfs      /dev/shm    tmpfs   defaults,rw,noexec,nodev,nosuid,relatime   0 0" >> /etc/fstab
 echo "tmpfs      /tmp        tmpfs   defaults,rw,noexec,nodev,nosuid,relatime   0 0" >> /etc/fstab
 echo "tmpfs      /var/tmp    tmpfs   defaults,rw,noexec,nodev,nosuid,relatime   0 0" >> /etc/fstab
+
+#config file location
+RC="$(pwd)"
 
 # Copy updatedb.conf
 instconf "$RC/updatedb.conf" "/etc/updatedb.conf"

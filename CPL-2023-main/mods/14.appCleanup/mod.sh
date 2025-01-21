@@ -1,16 +1,37 @@
 #!/usr/bin/env bash
 
-# Disable services using 'disnow'
+# Helper functions
+disnow() {
+    systemctl stop "$1" 2>/dev/null && systemctl disable "$1" && echo "[INFO] Disabled $1" || echo "[WARN] Could not disable $1"
+}
+
+pwarn() {
+    echo "[WARNING] $1"
+}
+
+perror() {
+    echo "[ERROR] $1" >&2
+}
+
+# Disable services
 services=("nfs-server" "rpcbind" "dovecot" "squid" "nis" "snmpd" "rsync" "postfix")
 for service in "${services[@]}"; do
     disnow "$service"
 done
 
 # Disable postfix using 'update-rc.d'
-update-rc.d postfix disable
+if command -v update-rc.d &>/dev/null; then
+    update-rc.d postfix disable && echo "[INFO] Disabled postfix via update-rc.d"
+else
+    pwarn "update-rc.d not found; postfix may not be disabled"
+fi
 
-# Prelink cleanup
-prelink -ua
+# Prelink cleanup (skip if prelink is not installed)
+if command -v prelink &>/dev/null; then
+    prelink -ua && echo "[INFO] Prelink cleanup completed"
+else
+    pwarn "Prelink is not installed; skipping"
+fi
 
 # List of banned hacking tools and unnecessary packages
 banned=(
@@ -23,11 +44,12 @@ banned=(
 
 # Check if packages are installed and remove them
 for package in "${banned[@]}"; do
-    if ! apt-cache madison "$package" &>/dev/null; then
-        echo "$package"
+    if dpkg -l | grep -qw "$package"; then
+        echo "[INFO] $package is installed; removing..."
+        apt-get remove -y "$package" && echo "[INFO] Removed $package" || perror "Failed to remove $package"
+    else
+        echo "[INFO] $package is not installed"
     fi
 done
 
-apt remove -y "${banned[@]}" || pwarn "Retrying removal in filtered mode" && aptr "${banned[@]}" || perror "Failed to remove banned packages"
-
-aptar
+echo "[SUCCESS] Removal of banned packages completed"

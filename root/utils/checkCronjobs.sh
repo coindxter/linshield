@@ -4,3 +4,6 @@ for user in $(cut -f1 -d: /etc/passwd); do
     sudo crontab -u $user -l 2>/dev/null || echo "No crontab for $user"
     echo "-------------------------"
 done
+
+
+#Useful script to check all users cronjobs

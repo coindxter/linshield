@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 
+#config file directory
+RC="$(pwd)"
+
+# Helper functions
+instconf() {
+    cp "$1" "$2" && echo "[SUCCESS] Copied $1 to $2" || echo "[ERROR] Failed to copy $1 to $2"
+}
+
+ptodo() {
+    echo "[TODO] $1"
+}
+
+psuccess() {
+    echo "[SUCCESS] $1"
+}
+
 # Copy user.js to all Firefox profiles in /home
 for home in /home/*/; do
     user=$(basename "$home")

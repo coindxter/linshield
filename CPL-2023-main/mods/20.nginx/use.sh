@@ -1,13 +1,25 @@
 #!/usr/bin/env bash
 
-# Enable incoming HTTP traffic using 'ufw' firewall
-ufw enable http
+# Helper function for error handling
+perror() {
+    echo "[ERROR] $1" >&2
+    exit 1
+}
 
-# Enable incoming HTTPS traffic using 'ufw' firewall
-ufw enable https
+# Enable incoming HTTP traffic
+echo "[INFO] Allowing HTTP traffic through UFW..."
+ufw allow http || perror "Failed to allow HTTP traffic"
 
-# Change ownership of the /var/www/ directory and its contents to the 'www-data' user and group
-chown -R www-data:www-data /var/www/
+# Enable incoming HTTPS traffic
+echo "[INFO] Allowing HTTPS traffic through UFW..."
+ufw allow https || perror "Failed to allow HTTPS traffic"
 
-# Set permissions on directories within /var/www/ to 775 (owner: read, write, execute; group: read, execute; others: read, execute)
-find /var/www -type d -exec chmod 775 {} \;
+# Change ownership of the /var/www/ directory and its contents
+echo "[INFO] Changing ownership of /var/www/ to www-data:www-data..."
+chown -R www-data:www-data /var/www || perror "Failed to change ownership of /var/www"
+
+# Set permissions on directories within /var/www/ to 775
+echo "[INFO] Setting permissions on directories in /var/www/ to 775..."
+find /var/www -type d -exec chmod 775 {} \; || perror "Failed to set permissions on directories in /var/www"
+
+echo "[SUCCESS] HTTP and HTTPS traffic enabled, and /var/www permissions configured."

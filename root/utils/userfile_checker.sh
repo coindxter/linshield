@@ -23,3 +23,4 @@ for user in $(cut -d: -f1 /etc/passwd); do
   fi
 done
 
+#helpful script to show all files in every single users home directory

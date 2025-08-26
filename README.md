@@ -145,6 +145,7 @@ Keep this file structure intact for better organization and clarity.
 - [x] ReadMe paser
 - [ ] A working Forensics question solver
 - [ ] Some Windows support for cross capatiable scripts
+- [ ] Configure PAM module according to CIS documment
 
 For a detailed to-do list, refer to [this document](https://docs.google.com/document/d/1-FsZslNIoV-RhUrHJwwTRpoqesvRpsoWxYrz_h87TeI/edit?usp=sharing).
 
